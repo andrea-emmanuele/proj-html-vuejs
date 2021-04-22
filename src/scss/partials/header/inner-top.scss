@@ -5,25 +5,7 @@ section#inner-top {
   .content {
     height: 100%;
     @include flex(row, space-between, center);
-
-    [class^="inner-"] {
-      color: $header-primary-color;
-      @include flex(row, flex-start, center);
-
-      .item {
-        font-size: $thin-size;
-        @include flex(row, flex-start, center);
-        margin-right: $more;
-
-        &:last-of-type {
-          margin-right: unset;
-        }
-
-        i {
-          margin-right: $little;
-        }
-      }
-    }
+    @include headerContent($header-primary-color, $thin-size, $more);
 
     .inner-left {
       .item {

@@ -4,3 +4,33 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin sticky {
+  position: fixed;
+}
+
+/*header sections*/
+
+@mixin headerContent($color, $font-size, $margin-right) {
+  height: 100%;
+  @include flex(row, space-between, center);
+
+  [class^="inner-"] {
+    color: $color;
+    @include flex(row, flex-start, center);
+
+    .item {
+      font-size: $font-size;
+      @include flex(row, flex-start, center);
+      margin-right: $margin-right;
+
+      &:last-of-type {
+        margin-right: unset;
+      }
+
+      i {
+        margin-right: $little;
+      }
+    }
+  }
+}

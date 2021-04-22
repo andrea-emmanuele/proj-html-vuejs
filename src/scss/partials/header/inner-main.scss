@@ -1,0 +1,39 @@
+section#inner-main {
+  @include sticky;
+  width: 100%;
+  height: 100px;
+  text-transform: uppercase;
+
+  .content {
+    @include headerContent($header-secondary-color, $normal-size, $much);
+
+    .inner-left {
+      .brand {
+        font-size: $big-size;
+        font-weight: $bold;
+        color: $header-primary-color;
+        letter-spacing: $letter-spacing;
+        @include flex(row, flex-start, center);
+
+        span {
+          color: $brand-color;
+          background: rgba(0, 0, 0, $span-opacity);
+          padding: $span-padding;
+          border-radius: $span-radius;
+          margin-right: $less-than-little;
+          display: block;
+        }
+      }
+    }
+
+    .inner-right {
+      .item {
+        font-weight: $bolder;
+
+        button {
+          margin-right: $little;
+        }
+      }
+    }
+  }
+}

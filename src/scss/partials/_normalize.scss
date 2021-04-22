@@ -15,6 +15,7 @@ body {
 
   a {
     color: unset;
+    text-decoration: none;
   }
 
   i {
@@ -24,6 +25,14 @@ body {
     &.fab {
       @extend .fab;
     }
+  }
+
+  button {
+    all: unset;
+    background: $button-primary-color;
+    padding: $button-spacing;
+    border-radius: $button-radius;
+    cursor: pointer;
   }
 }
 
