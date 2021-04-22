@@ -14,14 +14,18 @@ $primary-font: 'Roboto', sans-serif;
 $thin-size: .95rem;
 $normal-size: 1rem;
 $big-size: 1.2rem;
+$heading-biggest-size: 5rem;
 
 /*font weights*/
 $bolder: 500;
 $bold: 600;
+$boldest: 900;
 
 /*sizes*/
 $content-width: 1135px;
 $header-inner-top-height: 50px;
+$jumbo-height: 875px;
+$jumbo-content-width: 800px;
 
 /*spacing*/
 $less-than-little: .2rem;
@@ -29,16 +33,29 @@ $little: .5rem;
 $normal: 1rem;
 $more: 1.5rem;
 $much: 2rem;
+$more-than-much: 3rem;
+$jumbo-line-height: 1.8rem;
 
 /*brand*/
 $brand-color: #00a6a6;
 $letter-spacing: .3rem;
-$span-opacity: .4;
+$span-opacity: .6;
 $span-padding: .75rem 0 .75rem 2rem;
 $span-radius: 5rem 0 0 5rem;
 
+/*jumbo overlay*/
+$jumbo-overlay-opacity: .7;
+
 /*buttons*/
 $button-primary-color: #058283;
+$button-secondary-color: transparent;
 $button-spacing: .9rem 2rem;
 $button-radius: .3rem;
+
+/*wrapper*/
+$wrapper-opacity: .25;
+$wrapper-padding: .4rem 1rem;
+
+/*paths*/
+$jumbo-path: "../images/jumbo.png";
 

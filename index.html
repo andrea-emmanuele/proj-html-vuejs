@@ -29,7 +29,12 @@
                 </div>
             </section>
             <section id="jumbo">
-
+                <div class="content">
+                    <div class="item" v-for="item in header.jumbo.items" v-html="getItems(item)"></div>
+                    <div class="actions">
+                        <div class="item" v-for="item in header.jumbo.actions" v-html="getItems(item)"></div>
+                    </div>
+                </div>
             </section>
         </header>
         <main>

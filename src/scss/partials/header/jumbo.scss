@@ -1,0 +1,46 @@
+section#jumbo {
+  position: relative;
+  background: url($jumbo-path) no-repeat bottom center;
+  background-size: cover;
+  height: $jumbo-height;
+  @include flex(row, center, center);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, $jumbo-overlay-opacity);
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    z-index: 2;
+  }
+
+  .content {
+    position: relative;
+    width: $jumbo-content-width;
+    text-align: center;
+    z-index: 3;
+
+    p {
+      font-size: $big-size;
+      color: $header-primary-color;
+      line-height: $jumbo-line-height;
+      margin-top: $normal;
+    }
+
+    .actions {
+      @include flex(row, center, center);
+      margin-top: $more-than-much;
+
+      button {
+        margin-right: $more;
+
+        &.secondary {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

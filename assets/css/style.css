@@ -7,12 +7,12 @@
  */
 .fa,
 .fas,
-.content i,
+body .content i,
 .far,
 .fal,
 .fad,
 .fab,
-.content i.fab {
+body .content i.fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -22,7 +22,7 @@
   line-height: 1;
 }
 
-.content i {
+body .content i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -124,7 +124,7 @@
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.content i.fa-pull-left,
+body .content i.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
@@ -132,7 +132,7 @@
 }
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.content i.fa-pull-right,
+body .content i.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
@@ -6095,7 +6095,7 @@ readers do not read off random characters that represent icons */
 }
 .fa,
 .fas,
-.content i {
+body .content i {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
@@ -6112,7 +6112,7 @@ readers do not read off random characters that represent icons */
   src: url("../webfonts/fa-brands-400.eot");
   src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
-.fab, .content i.fab {
+.fab, body .content i.fab {
   font-family: "Font Awesome 5 Brands";
   font-weight: 400;
 }
@@ -6126,7 +6126,10 @@ readers do not read off random characters that represent icons */
 /*sizes*/
 /*spacing*/
 /*brand*/
+/*jumbo overlay*/
 /*buttons*/
+/*wrapper*/
+/*paths*/
 /*header sections*/
 * {
   padding: 0;
@@ -6138,21 +6141,38 @@ body {
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
-
-.content {
+body .content {
   width: 1135px;
   margin: 0 auto;
 }
-.content a {
+body .content a {
   color: unset;
   text-decoration: none;
 }
-.content button {
+body .content h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+body .content button {
   all: unset;
-  background: #058283;
+  font-weight: 500;
+  text-transform: uppercase;
   padding: 0.9rem 2rem;
   border-radius: 0.3rem;
   cursor: pointer;
+}
+body .content button.primary {
+  background: #058283;
+}
+body .content button.secondary {
+  background: transparent;
+  border: 1px solid #058283;
+}
+body .content .wrapper {
+  background: rgba(50, 71, 50, 0.25);
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  text-align: center;
 }
 
 /*structure*/
@@ -6219,6 +6239,7 @@ header section#inner-top .content .inner-right .item i.linkedin:before {
 }
 header section#inner-main {
   position: fixed;
+  z-index: 3;
   width: 100%;
   height: 100px;
   text-transform: uppercase;
@@ -6263,7 +6284,7 @@ header section#inner-main .content .inner-left .brand {
 }
 header section#inner-main .content .inner-left .brand span {
   color: #00a6a6;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(51, 71, 70, 0.6);
   padding: 0.75rem 0 0.75rem 2rem;
   border-radius: 5rem 0 0 5rem;
   margin-right: 0.2rem;
@@ -6274,6 +6295,52 @@ header section#inner-main .content .inner-right .item {
 }
 header section#inner-main .content .inner-right .item button {
   margin-right: 0.5rem;
+}
+header section#jumbo {
+  position: relative;
+  background: url("../images/jumbo.png") no-repeat bottom center;
+  background-size: cover;
+  height: 875px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header section#jumbo:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  z-index: 2;
+}
+header section#jumbo .content {
+  position: relative;
+  width: 800px;
+  text-align: center;
+  z-index: 3;
+}
+header section#jumbo .content p {
+  font-size: 1.2rem;
+  color: #c0c3d0;
+  line-height: 1.8rem;
+  margin-top: 1rem;
+}
+header section#jumbo .content .actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+header section#jumbo .content .actions button {
+  margin-right: 1.5rem;
+}
+header section#jumbo .content .actions button.secondary {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,32 +7,56 @@
 body {
   font-family: $primary-font;
   color: $primary-color;
-}
 
-.content {
-  width: $content-width;
-  margin: 0 auto;
+  .content {
+    width: $content-width;
+    margin: 0 auto;
 
-  a {
-    color: unset;
-    text-decoration: none;
-  }
+    a {
+      color: unset;
+      text-decoration: none;
+    }
 
-  i {
-    @extend %fa-icon;
-    @extend .fas;
+    i {
+      @extend %fa-icon;
+      @extend .fas;
 
-    &.fab {
-      @extend .fab;
+      &.fab {
+        @extend .fab;
+      }
+    }
+
+    h1 {
+      font-size: $heading-biggest-size;
+      font-weight: $boldest;
+    }
+
+    button {
+      all: unset;
+      font-weight: $bolder;
+      text-transform: uppercase;
+      padding: $button-spacing;
+      border-radius: $button-radius;
+      cursor: pointer;
+
+      &.primary {
+        background: $button-primary-color;
+      }
+
+      &.secondary {
+        background: $button-secondary-color;
+        border: 1px solid $button-primary-color;
+      }
+
+    }
+
+    .wrapper {
+      background: rgba(50, 71, 50, $wrapper-opacity);
+      padding: $wrapper-padding;
+      border-radius: $button-radius;
+      text-align: center;
     }
   }
-
-  button {
-    all: unset;
-    background: $button-primary-color;
-    padding: $button-spacing;
-    border-radius: $button-radius;
-    cursor: pointer;
-  }
 }
+
 
