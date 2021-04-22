@@ -1,0 +1,6 @@
+header {
+  .container {
+    @import "inner-top";
+    @import "inner-main";
+  }
+}
