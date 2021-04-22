@@ -7,7 +7,7 @@ section#inner-top {
     @include flex(row, space-between, center);
 
     [class^="inner-"] {
-      color: $inner-top-main-color;
+      color: $header-primary-color;
       @include flex(row, flex-start, center);
 
       .item {
