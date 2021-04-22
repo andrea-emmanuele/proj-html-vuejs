@@ -5,10 +5,12 @@
 }
 
 body {
+  font-family: $primary-font;
   color: $primary-color;
 }
 
 .content {
   width: $content-width;
+  margin: 0 auto;
 }
 

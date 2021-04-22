@@ -1,0 +1,18 @@
+section#inner-top {
+  background: $header-inner-top-color;
+  height: $header-inner-top-height;
+
+  .content {
+    .inner-left {
+      span {
+        &.time {
+          &:before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: "\f017";
+          }
+        }
+      }
+    }
+  }
+}
