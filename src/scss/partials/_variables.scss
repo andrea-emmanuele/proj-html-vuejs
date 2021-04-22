@@ -1,14 +1,23 @@
 /*theme colors*/
 $header-inner-top-color: #21333e;
 
-/*colors*/
+/*text colors*/
 $primary-color: #fff;
+$header-primary-color: #c0c3d0;
+$header-secondary-color: #f9f9f9;
+$header-ternary-color: #00a6a6;
 
 /*fonts*/
 $primary-font: 'Roboto', sans-serif;
+$thin-size: .95rem;
 
 /*sizes*/
-$content-width: 1200px;
-
+$content-width: 1135px;
 $header-inner-top-height: 50px;
+
+/*spacing*/
+$little: .5rem;
+$normal: 1rem;
+$more: 1.5rem;
+$much: 2rem;
 

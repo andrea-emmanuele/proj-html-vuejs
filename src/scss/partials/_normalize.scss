@@ -12,5 +12,18 @@ body {
 .content {
   width: $content-width;
   margin: 0 auto;
+
+  a {
+    color: unset;
+  }
+
+  i {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &.fab {
+      @extend .fab;
+    }
+  }
 }
 

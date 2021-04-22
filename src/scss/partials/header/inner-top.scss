@@ -3,13 +3,73 @@ section#inner-top {
   height: $header-inner-top-height;
 
   .content {
+    height: 100%;
+    @include flex(row, space-between, center);
+
+    [class^="inner-"] {
+      color: $inner-top-main-color;
+      @include flex(row, flex-start, center);
+
+      .item {
+        font-size: $thin-size;
+        @include flex(row, flex-start, center);
+        margin-right: $more;
+
+        &:last-of-type {
+          margin-right: unset;
+        }
+
+        i {
+          margin-right: $little;
+        }
+      }
+    }
+
     .inner-left {
-      span {
-        &.time {
-          &:before {
-            @extend %fa-icon;
-            @extend .fas;
-            content: "\f017";
+      .item {
+        i {
+          &.time {
+            &:before {
+              content: "\f017";
+            }
+          }
+        }
+      }
+    }
+
+    .inner-right {
+      .item {
+        i {
+          &.phone {
+            &:before {
+              content: "\f879";
+            }
+          }
+
+          &.message {
+            &:before {
+              content: "\f0e0";
+            }
+          }
+
+          &.facebook {
+            margin-right: $much;
+            &:before {
+              content: "\f39e";
+            }
+          }
+
+          &.twitter {
+            margin-right: $much;
+            &:before {
+              content: "\f099";
+            }
+          }
+
+          &.linkedin {
+            &:before {
+              content: "\f0e1";
+            }
           }
         }
       }
