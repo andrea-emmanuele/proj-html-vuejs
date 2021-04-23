@@ -143,9 +143,199 @@ new Vue({
                         type: "paragraph"
                     }]
                 }]
+            },
+            about: {
+                items: [{
+                    text: "about the network",
+                    type: "span",
+                    class: "primary"
+                },
+                {
+                    text: "<span class='wrapper'>The</span>Company",
+                    type: "h",
+                    strongness: "1"
+                },
+                {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita ipsa nostrum velit. Eveniet, similique!",
+                    type: "paragraph"
+                },
+                {
+                    innerContainer: {
+                        iconHeadings: [{
+                            headingText: "Lorem",
+                            type: "icon-heading",
+                            strongness: "2",
+                            class: "medal",
+                            paragraphText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                        },
+                        {
+                            headingText: "Lorem",
+                            type: "icon-heading",
+                            strongness: "2",
+                            class: "lock",
+                            paragraphText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                        },
+                        {
+                            headingText: "Lorem",
+                            type: "icon-heading",
+                            strongness: "2",
+                            class: "edit",
+                            paragraphText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                        },
+                        {
+                            headingText: "Lorem",
+                            type: "icon-heading",
+                            strongness: "2",
+                            class: "graduation",
+                            paragraphText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                        }]
+                    }
+                }]
+            },
+            services: {
+                items: [{
+                    text: "our business areas",
+                    type: "span",
+                    class: "primary"
+                },
+                {
+                    text: "Excellence in <span class='wrapper'>Services</span>",
+                    type: "h",
+                    strongness: "1"
+                }],
+                itemsGroup: [{
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam deleniti, dolore dolorem ea, ex exercitationem explicabo incidunt ipsum itaque iure iusto molestiae obcaecati optio porro quae quas soluta veritatis.",
+                    type: "paragraph"
+                },
+                {
+                    text: "see all",
+                    type: "button",
+                    class: "secondary"
+                }],
+                cards: [{
+                    items: [{
+                        class: "network",
+                        type: "icon"
+                    },
+                    {
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
+                    },
+                    {
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                        type: "paragraph"
+                    },
+                        {
+                            text: "read more",
+                            type: "button",
+                            class: "secondary"
+                        }]
+                },
+                {
+                    items: [{
+                        class: "briefcase",
+                        type: "icon"
+                    },
+                        {
+                            text: "Lorem ipsum.",
+                            type: "h",
+                            strongness: "2"
+                        },
+                        {
+                            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                            type: "paragraph"
+                        },
+                        {
+                            text: "read more",
+                            type: "button",
+                            class: "secondary"
+                        }]
+                },
+                {
+                    items: [{
+                        class: "analytics",
+                        type: "icon"
+                    },
+                    {
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
+                    },
+                    {
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                        type: "paragraph"
+                    },
+                    {
+                        text: "read more",
+                        type: "button",
+                        class: "secondary"
+                    }]
+                },
+                {
+                    items: [{
+                        class: "airplane",
+                        type: "icon"
+                    },
+                        {
+                            text: "Lorem ipsum.",
+                            type: "h",
+                            strongness: "2"
+                        },
+                        {
+                            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                            type: "paragraph"
+                        },
+                        {
+                            text: "read more",
+                            type: "button",
+                            class: "secondary"
+                        }]
+                },
+                {
+                    items: [{
+                        class: "globe",
+                        type: "icon"
+                    },
+                        {
+                            text: "Lorem ipsum.",
+                            type: "h",
+                            strongness: "2"
+                        },
+                        {
+                            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                            type: "paragraph"
+                        },
+                        {
+                            text: "read more",
+                            type: "button",
+                            class: "secondary"
+                        }]
+                },
+                {
+                    items: [{
+                        class: "folder",
+                        type: "icon"
+                    },
+                        {
+                            text: "Lorem ipsum.",
+                            type: "h",
+                            strongness: "2"
+                        },
+                        {
+                            text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                            type: "paragraph"
+                        },
+                        {
+                            text: "read more",
+                            type: "button",
+                            class: "secondary"
+                        }]
+                }]
             }
         },
         getItems (item) {
+            console.log(item.type);
             switch (item.type) {
                 case "link": return `<a href="${item.href}">${item.text}</a>`;
                 case "button": return `<button class="${item.class}">${item.text}</button>`;
@@ -158,8 +348,14 @@ new Vue({
                 case "icon": return `<i class="${item.class}"></i>`;
                 case "icon-text": return `<i class="${item.class}"></i> 
                                      <p>${item.text}</p>`;
+                case "icon-heading": return `<div class="icon-heading">
+                                                <i class="${item.class}"></i> 
+                                                 <h${item.strongness}>${item.headingText}</h${item.strongness}>
+                                            </div>
+                                            <p>${item.paragraphText}</p>`;
                 case "h": return `<h${item.strongness}>${item.text}</h${item.strongness}>`;
                 case "paragraph": return `<p>${item.text}</p>`;
+                case "span": return `<span class="${item.class}">${item.text}</span>`;
             }
         }
     }

@@ -1,7 +1,7 @@
 /*theme colors*/
-$primary-color: #fff;
-$secondary-color: #111117;
-$ternary-color: #eef4ed;
+$theme-primary-color: #fff;
+$theme-secondary-color: #111117;
+$theme-ternary-color: #eef4ed;
 $header-inner-top-color: #21333e;
 $icons-bg-color: #daeced;
 $icons-color: #058283;
@@ -9,9 +9,9 @@ $icons-color: #058283;
 /*text colors*/
 $primary-color: #fff;
 $secondary-color: #21333e;
+$ternary-color: #00a6a6;
 $header-primary-color: #c0c3d0;
 $header-secondary-color: #f9f9f9;
-$header-ternary-color: #00a6a6;
 
 /*fonts*/
 $primary-font: 'Roboto', sans-serif;
@@ -20,8 +20,10 @@ $primary-font: 'Roboto', sans-serif;
 $thin-size: .95rem;
 $normal-size: 1rem;
 $big-size: 1.2rem;
+$heading-medium-size: 3rem;
 $heading-biggest-size: 5rem;
 $main-icons-size: 2rem;
+$icon-heading-size: 1.4rem;
 
 /*font weights*/
 $light: 100;
@@ -63,14 +65,21 @@ $button-spacing: .9rem 2rem;
 $button-radius: .3rem;
 
 /*wrapper*/
-$wrapper-opacity: .25;
+$wrapper-header-opacity: .25;
+$wrapper-primary-opacity: .1;
 $wrapper-padding: .4rem 1rem;
+$wrapper-primary-color: #058283;
 
 /*cards*/
+$card-secondary-color: #19191f;
 $card-spacing: 3rem 2.5rem;
 $card-radius: .8rem;
 $card-p-line-height: 1.65rem;
 
+/*p*/
+$line-height-tall: 1.65rem;
+
 /*paths*/
 $jumbo-path: "../images/jumbo.png";
+$about-image-path: "../images/about-3.jpg";
 

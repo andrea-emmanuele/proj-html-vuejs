@@ -1,0 +1,148 @@
+i {
+  @extend %fa-icon;
+  @extend .fas;
+  color: $icons-color !important;
+
+  &.fab {
+    @extend .fab;
+  }
+
+  &.circled {
+    position: relative;
+    color: $icons-color;
+    background: $icons-bg-color;
+    width: $icon-sizes;
+    height: $icon-sizes;
+    border-radius: 50%;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  /*header*/
+  &.time {
+    &:before {
+      content: "\f017";
+    }
+  }
+
+  &.phone {
+    &:before {
+      content: "\f879";
+    }
+  }
+
+  &.message {
+    &:before {
+      content: "\f0e0";
+    }
+  }
+
+  &.facebook {
+    margin-right: $much !important;
+    &:before {
+      content: "\f39e";
+    }
+  }
+
+  &.twitter {
+    margin-right: $much !important;
+    &:before {
+      content: "\f099";
+    }
+  }
+
+  &.linkedin {
+    &:before {
+      content: "\f0e1";
+    }
+  }
+
+  /*main*/
+  &.users {
+    &:before {
+      content: "\f500";
+    }
+  }
+
+  &.chart {
+    &:before {
+      content: "\f200";
+    }
+  }
+
+  &.tachometer {
+    &:before {
+      content: "\f3fd";
+    }
+  }
+
+  &.medal {
+    &:before {
+      content: "\f5a2";
+      display: inline-block;
+    }
+  }
+
+  &.lock {
+    &:before {
+      content: "\f023";
+      display: inline-block;
+    }
+  }
+
+  &.edit {
+    &:before {
+      @extend .far;
+      content: "\f044";
+      display: inline-block;
+    }
+  }
+
+  &.graduation {
+    &:before {
+      content: "\f19d";
+      display: inline-block;
+    }
+  }
+
+  &.network {
+    &:before {
+      content: "\f6ff";
+    }
+  }
+
+  &.briefcase {
+    &:before {
+      content: "\f0b1";
+    }
+  }
+
+  &.analytics {
+    &:before {
+      content: "\f080";
+    }
+  }
+
+  &.airplane {
+    &:before {
+      content: "\f072";
+    }
+  }
+
+  &.globe {
+    &:before {
+      content: "\f0ac";
+    }
+  }
+
+  &.folder {
+    &:before {
+      content: "\f07c";
+    }
+  }
+}

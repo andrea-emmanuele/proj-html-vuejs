@@ -7,13 +7,13 @@
  */
 .fa,
 .fas,
-main section#advantages .cards .card i,
-body .content i,
+i,
 .far,
+i.edit:before,
 .fal,
 .fad,
 .fab,
-body .content i.fab {
+i.fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -23,7 +23,7 @@ body .content i.fab {
   line-height: 1;
 }
 
-main section#advantages .cards .card i, body .content i {
+i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -125,18 +125,18 @@ main section#advantages .cards .card i, body .content i {
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-main section#advantages .cards .card i.fa-pull-left,
-body .content i.fa-pull-left,
+i.fa-pull-left,
 .far.fa-pull-left,
+i.fa-pull-left.edit:before,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
   margin-right: 0.3em;
 }
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-main section#advantages .cards .card i.fa-pull-right,
-body .content i.fa-pull-right,
+i.fa-pull-right,
 .far.fa-pull-right,
+i.fa-pull-right.edit:before,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
   margin-left: 0.3em;
@@ -6098,8 +6098,7 @@ readers do not read off random characters that represent icons */
 }
 .fa,
 .fas,
-main section#advantages .cards .card i,
-body .content i {
+i {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
@@ -6116,8 +6115,25 @@ body .content i {
   src: url("../webfonts/fa-brands-400.eot");
   src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
-.fab, body .content i.fab {
+.fab, i.fab {
   font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-regular-400.eot");
+  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far, i.edit:before {
+  font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
 
@@ -6134,8 +6150,96 @@ body .content i {
 /*buttons*/
 /*wrapper*/
 /*cards*/
+/*p*/
 /*paths*/
 /*header sections*/
+i {
+  color: #058283 !important;
+  /*header*/
+  /*main*/
+}
+i.circled {
+  position: relative;
+  color: #058283;
+  background: #daeced;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+i.circled:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+i.time:before {
+  content: "";
+}
+i.phone:before {
+  content: "";
+}
+i.message:before {
+  content: "";
+}
+i.facebook {
+  margin-right: 2rem !important;
+}
+i.facebook:before {
+  content: "";
+}
+i.twitter {
+  margin-right: 2rem !important;
+}
+i.twitter:before {
+  content: "";
+}
+i.linkedin:before {
+  content: "";
+}
+i.users:before {
+  content: "";
+}
+i.chart:before {
+  content: "";
+}
+i.tachometer:before {
+  content: "";
+}
+i.medal:before {
+  content: "";
+  display: inline-block;
+}
+i.lock:before {
+  content: "";
+  display: inline-block;
+}
+i.edit:before {
+  content: "";
+  display: inline-block;
+}
+i.graduation:before {
+  content: "";
+  display: inline-block;
+}
+i.network:before {
+  content: "";
+}
+i.briefcase:before {
+  content: "";
+}
+i.analytics:before {
+  content: "";
+}
+i.airplane:before {
+  content: "";
+}
+i.globe:before {
+  content: "";
+}
+i.folder:before {
+  content: "";
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6146,53 +6250,131 @@ body {
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
-body .content {
+body main section {
+  padding: 7rem;
+}
+body main section span.primary {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #00a6a6;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  display: block;
+}
+body main section span.wrapper {
+  color: #058283;
+  text-transform: unset;
+  margin-right: 0.5rem;
+}
+body main section h1 {
+  font-size: 3rem;
+}
+body main section p {
+  font-weight: 100;
+  line-height: 1.65rem;
+}
+body section .content {
   width: 1135px;
   margin: 0 auto;
 }
-body .content a {
+body section .content a {
   color: unset;
   text-decoration: none;
 }
-body .content i.circled {
-  position: relative;
-  color: #058283;
-  background: #daeced;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-body .content i.circled:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #058283 !important;
-}
-body .content h1 {
-  font-size: 5rem;
-  font-weight: 900;
-}
-body .content button {
+body section .content button {
   all: unset;
   font-weight: 500;
   text-transform: uppercase;
   padding: 0.9rem 2rem;
   border-radius: 0.3rem;
+  white-space: nowrap;
   cursor: pointer;
 }
-body .content button.primary {
+body section .content button.primary {
   background: #058283;
 }
-body .content button.secondary {
+body section .content button.secondary {
   background: transparent;
   border: 1px solid #058283;
 }
-body .content .wrapper {
-  background: rgba(50, 71, 50, 0.25);
+body section .content .wrapper {
+  background: rgba(50, 71, 50, 0.1);
   padding: 0.4rem 1rem;
   border-radius: 0.3rem;
   text-align: center;
+}
+body section .content .icon-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body section .content .icon-heading i:before {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+body section .content .inner-content.inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+body section .content .inner-content.inline p {
+  width: 80%;
+}
+body section .content .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body section .content .cards .card {
+  padding: 3rem 2.5rem;
+  border-radius: 0.8rem;
+  flex: 0 0 calc(95% / 3);
+}
+body section .content .cards .card i {
+  font-size: 2rem;
+}
+body section .content .cards .card h2, body section .content .cards .card p {
+  margin-top: 1.5rem;
+}
+body section .content .cards .card p {
+  font-weight: 100;
+  line-height: 1.65rem;
+}
+body section .content .cards .card button {
+  margin-top: 2rem;
+}
+body section.primary {
+  background: #fff;
+  color: #21333e;
+}
+body section.primary p {
+  margin-top: 1.5rem;
+}
+body section.secondary {
+  background: #111117;
+}
+body section.secondary .wrapper {
+  color: #fff;
+}
+body section.secondary .cards {
+  margin-top: 2rem;
+}
+body section.secondary .cards .card {
+  color: #fff;
+  background: #19191f;
+  margin-top: 2rem;
+}
+body section.ternary {
+  background: #eef4ed;
+}
+body section.ternary .cards .card {
+  color: #21333e;
+  background: #fff;
 }
 
 /*structure*/
@@ -6232,30 +6414,6 @@ header section#inner-top .content [class^=inner-] .item:last-of-type {
 }
 header section#inner-top .content [class^=inner-] .item i {
   margin-right: 0.5rem;
-}
-header section#inner-top .content .inner-left .item i.time:before {
-  content: "";
-}
-header section#inner-top .content .inner-right .item i.phone:before {
-  content: "";
-}
-header section#inner-top .content .inner-right .item i.message:before {
-  content: "";
-}
-header section#inner-top .content .inner-right .item i.facebook {
-  margin-right: 2rem;
-}
-header section#inner-top .content .inner-right .item i.facebook:before {
-  content: "";
-}
-header section#inner-top .content .inner-right .item i.twitter {
-  margin-right: 2rem;
-}
-header section#inner-top .content .inner-right .item i.twitter:before {
-  content: "";
-}
-header section#inner-top .content .inner-right .item i.linkedin:before {
-  content: "";
 }
 header section#inner-main {
   position: fixed;
@@ -6343,6 +6501,13 @@ header section#jumbo .content {
   text-align: center;
   z-index: 3;
 }
+header section#jumbo .content .wrapper {
+  background: rgba(50, 71, 50, 0.25);
+}
+header section#jumbo .content h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
 header section#jumbo .content p {
   font-size: 1.2rem;
   color: #c0c3d0;
@@ -6363,44 +6528,35 @@ header section#jumbo .content .actions button.secondary {
   margin-right: 0;
 }
 
-main section#advantages {
-  background: #eef4ed;
-  padding: 7rem;
+main section#about {
+  position: relative;
 }
-main section#advantages .cards {
+main section#about:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../images/about-3.jpg") no-repeat center;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  content: "";
+  display: block;
+}
+main section#about .inner-content {
+  width: 48%;
+}
+main section#about .inner-content .inner-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
 }
-main section#advantages .cards .card {
-  color: #21333e;
-  background: #fff;
-  padding: 3rem 2.5rem;
-  border-radius: 0.8rem;
-  flex: 0 0 calc(95% / 3);
-}
-main section#advantages .cards .card i {
-  font-size: 2rem;
-}
-main section#advantages .cards .card i.users:before {
-  color: #000;
-  content: "";
-}
-main section#advantages .cards .card i.chart:before {
-  color: #000;
-  content: "";
-}
-main section#advantages .cards .card i.tachometer:before {
-  color: #000;
-  content: "";
-}
-main section#advantages .cards .card h2, main section#advantages .cards .card p {
-  margin-top: 1.5rem;
-}
-main section#advantages .cards .card p {
-  font-weight: 100;
-  line-height: 1.65rem;
+main section#about .inner-content .inner-container .item-container {
+  flex: 0 0 48%;
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

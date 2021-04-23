@@ -23,6 +23,15 @@ section#jumbo {
     text-align: center;
     z-index: 3;
 
+    .wrapper {
+      background: rgba(50, 71, 50, $wrapper-header-opacity);
+    }
+
+    h1 {
+      font-size: $heading-biggest-size;
+      font-weight: $boldest;
+    }
+
     p {
       font-size: $big-size;
       color: $header-primary-color;

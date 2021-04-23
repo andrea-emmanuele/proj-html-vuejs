@@ -1,13 +1,14 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import "fontawesome/fontawesome.scss";
-@import "fontawesome/solid.scss";
-@import "fontawesome/brands.scss";
+@import "fontawesome/fontawesome";
+@import "fontawesome/solid";
+@import "fontawesome/brands";
+@import "fontawesome/regular";
 
 /*partials*/
 @import "partials/variables";
-@import "partials/placeholders";
 @import "partials/mixins";
+@import "partials/icons";
 @import "partials/normalize";
 
 /*structure*/

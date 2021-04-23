@@ -6,55 +6,5 @@ section#inner-top {
     height: 100%;
     @include flex(row, space-between, center);
     @include headerContent($header-primary-color, $thin-size, $more);
-
-    .inner-left {
-      .item {
-        i {
-          &.time {
-            &:before {
-              content: "\f017";
-            }
-          }
-        }
-      }
-    }
-
-    .inner-right {
-      .item {
-        i {
-          &.phone {
-            &:before {
-              content: "\f879";
-            }
-          }
-
-          &.message {
-            &:before {
-              content: "\f0e0";
-            }
-          }
-
-          &.facebook {
-            margin-right: $much;
-            &:before {
-              content: "\f39e";
-            }
-          }
-
-          &.twitter {
-            margin-right: $much;
-            &:before {
-              content: "\f099";
-            }
-          }
-
-          &.linkedin {
-            &:before {
-              content: "\f0e1";
-            }
-          }
-        }
-      }
-    }
   }
 }

@@ -1,0 +1,31 @@
+section#about {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url($about-image-path) no-repeat center;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    content: "";
+    display: block;
+  }
+
+  .inner-content {
+    width: 48%;
+
+    .inner-container {
+      width: 100%;
+      @include flex(row, flex-start, flex-start);
+      flex-wrap: wrap;
+      padding: $more 0;
+
+      .item-container {
+        @include flexBasis(0, 0, 48%);
+        margin-top: $more-than-much;
+      }
+    }
+  }
+}

@@ -8,70 +8,165 @@ body {
   font-family: $primary-font;
   color: $primary-color;
 
-  .content {
-    width: $content-width;
-    margin: 0 auto;
+  main {
+    section {
+      padding: $sections-spacing;
 
-    a {
-      color: unset;
-      text-decoration: none;
-    }
+      span {
+        &.primary {
+          font-size: $thin-size;
+          font-weight: $bolder;
+          color: $ternary-color;
+          text-transform: uppercase;
+          margin: $much 0;
+          display: block;
+        }
 
-    i {
-      @extend %fa-icon;
-      @extend .fas;
-
-      &.fab {
-        @extend .fab;
+        &.wrapper {
+          color: $wrapper-primary-color;
+          text-transform: unset;
+          margin-right: $little;
+        }
       }
 
-      &.circled {
-        position: relative;
-        color: $icons-color;
-        background: $icons-bg-color;
-        width: $icon-sizes;
-        height: $icon-sizes;
-        border-radius: 50%;
+      h1 {
+        font-size: $heading-medium-size;
+      }
 
-        &:before {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: $icons-color !important;
+      p {
+        font-weight: $light;
+        line-height: $line-height-tall;
+      }
+    }
+  }
+
+  section {
+    .content {
+      width: $content-width;
+      margin: 0 auto;
+
+      a {
+        color: unset;
+        text-decoration: none;
+      }
+
+      button {
+        all: unset;
+        font-weight: $bolder;
+        text-transform: uppercase;
+        padding: $button-spacing;
+        border-radius: $button-radius;
+        white-space: nowrap;
+        cursor: pointer;
+
+        &.primary {
+          background: $button-primary-color;
+        }
+
+        &.secondary {
+          background: $button-secondary-color;
+          border: 1px solid $button-primary-color;
+        }
+
+      }
+
+      .wrapper {
+        background: rgba(50, 71, 50, $wrapper-primary-opacity);
+        padding: $wrapper-padding;
+        border-radius: $button-radius;
+        text-align: center;
+      }
+
+      .icon-heading {
+        @include flex(row, flex-start, center);
+
+        i {
+          &:before {
+            font-size: $icon-heading-size;
+            margin-right: $little;
+          }
+        }
+      }
+
+      .inner-content {
+        &.inline {
+          @include flex(row, space-between, center);
+          margin-top: $more;
+
+          p {
+            width: 80%;
+          }
+        }
+      }
+
+      .cards {
+        @include flex(row, space-between, center);
+        flex-wrap: wrap;
+
+        .card {
+          padding: $card-spacing;
+          border-radius: $card-radius;
+
+          $width: calc(95% / 3);
+          @include flexBasis(0, 0, $width);
+
+          i {
+            font-size: $main-icons-size;
+          }
+
+          h2, p {
+            margin-top: $more;
+          }
+
+          p {
+            font-weight: $light;
+            line-height: $card-p-line-height;
+          }
+
+          button {
+            margin-top: $much;
+          }
+
         }
       }
     }
 
-    h1 {
-      font-size: $heading-biggest-size;
-      font-weight: $boldest;
+    &.primary {
+      background: $theme-primary-color;
+      color: $secondary-color;
+
+      p {
+        margin-top: $more;
+      }
     }
 
-    button {
-      all: unset;
-      font-weight: $bolder;
-      text-transform: uppercase;
-      padding: $button-spacing;
-      border-radius: $button-radius;
-      cursor: pointer;
+    &.secondary {
+      background: $theme-secondary-color;
 
-      &.primary {
-        background: $button-primary-color;
+      .wrapper {
+        color: $primary-color;
       }
 
-      &.secondary {
-        background: $button-secondary-color;
-        border: 1px solid $button-primary-color;
-      }
+      .cards {
+        margin-top: $much;
 
+        .card {
+          color: $primary-color;
+          background: $card-secondary-color;
+          margin-top: $much;
+        }
+      }
     }
 
-    .wrapper {
-      background: rgba(50, 71, 50, $wrapper-opacity);
-      padding: $wrapper-padding;
-      border-radius: $button-radius;
-      text-align: center;
+    &.ternary {
+      background: $theme-ternary-color;
+
+      .cards {
+        .card {
+          color: $secondary-color;
+          background: $theme-primary-color;
+        }
+      }
     }
   }
 }

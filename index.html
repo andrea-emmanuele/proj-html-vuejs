@@ -38,11 +38,36 @@
             </section>
         </header>
         <main>
-            <section id="advantages">
+            <section id="advantages" class="ternary">
                 <div class="content">
                     <div class="cards">
                         <div class="card" v-for="(item, i) in main.advantages.cards">
                             <div class="item" v-for="item in main.advantages.cards[i].items" v-html="getItems(item)"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about" class="primary">
+                <div class="content">
+                    <div class="inner-content">
+                        <div class="item" v-for="item in main.about.items" v-html="getItems(item)"></div>
+                        <div class="inner-container">
+                            <div class="item-container" v-for="(item, i) in main.about.items[main.about.items.length - 1].innerContainer.iconHeadings" v-html="getItems(item)"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="secondary">
+                <div class="content">
+                    <div class="item" v-for="item in main.services.items" v-html="getItems(item)"></div>
+                    <div class="inner-content inline">
+                        <div class="item" v-for="item in main.services.itemsGroup" v-html="getItems(item)"></div>
+                    </div>
+                    <div class="inner-content">
+                        <div class="cards">
+                            <div class="card" v-for="(item, i) in main.services.cards">
+                                <div class="item" v-for="item in main.services.cards[i].items" v-html="getItems(item)"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
