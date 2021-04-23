@@ -7,6 +7,7 @@
  */
 .fa,
 .fas,
+main section#advantages .cards .card i,
 body .content i,
 .far,
 .fal,
@@ -22,7 +23,7 @@ body .content i.fab {
   line-height: 1;
 }
 
-body .content i {
+main section#advantages .cards .card i, body .content i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -124,6 +125,7 @@ body .content i {
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+main section#advantages .cards .card i.fa-pull-left,
 body .content i.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
@@ -132,6 +134,7 @@ body .content i.fa-pull-left,
 }
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+main section#advantages .cards .card i.fa-pull-right,
 body .content i.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
@@ -6095,6 +6098,7 @@ readers do not read off random characters that represent icons */
 }
 .fa,
 .fas,
+main section#advantages .cards .card i,
 body .content i {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -6129,6 +6133,7 @@ body .content i {
 /*jumbo overlay*/
 /*buttons*/
 /*wrapper*/
+/*cards*/
 /*paths*/
 /*header sections*/
 * {
@@ -6148,6 +6153,21 @@ body .content {
 body .content a {
   color: unset;
   text-decoration: none;
+}
+body .content i.circled {
+  position: relative;
+  color: #058283;
+  background: #daeced;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+body .content i.circled:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #058283 !important;
 }
 body .content h1 {
   font-size: 5rem;
@@ -6341,6 +6361,46 @@ header section#jumbo .content .actions button {
 }
 header section#jumbo .content .actions button.secondary {
   margin-right: 0;
+}
+
+main section#advantages {
+  background: #eef4ed;
+  padding: 7rem;
+}
+main section#advantages .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#advantages .cards .card {
+  color: #21333e;
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-radius: 0.8rem;
+  flex: 0 0 calc(95% / 3);
+}
+main section#advantages .cards .card i {
+  font-size: 2rem;
+}
+main section#advantages .cards .card i.users:before {
+  color: #000;
+  content: "";
+}
+main section#advantages .cards .card i.chart:before {
+  color: #000;
+  content: "";
+}
+main section#advantages .cards .card i.tachometer:before {
+  color: #000;
+  content: "";
+}
+main section#advantages .cards .card h2, main section#advantages .cards .card p {
+  margin-top: 1.5rem;
+}
+main section#advantages .cards .card p {
+  font-weight: 100;
+  line-height: 1.65rem;
 }
 
 /*# sourceMappingURL=style.css.map */

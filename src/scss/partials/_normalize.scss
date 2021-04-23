@@ -24,6 +24,23 @@ body {
       &.fab {
         @extend .fab;
       }
+
+      &.circled {
+        position: relative;
+        color: $icons-color;
+        background: $icons-bg-color;
+        width: $icon-sizes;
+        height: $icon-sizes;
+        border-radius: 50%;
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $icons-color !important;
+        }
+      }
     }
 
     h1 {

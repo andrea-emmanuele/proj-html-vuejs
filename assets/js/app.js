@@ -77,7 +77,8 @@ new Vue({
             jumbo: {
                 items: [{
                     text: "Lead~ <span class=\"wrapper\">Customer</span>",
-                    type: "h1"
+                    type: "h",
+                    strongness: "1"
                 },
                 {
                     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ea est eum incidunt necessitatibus odit officia praesentium quae, tempore vero.",
@@ -95,10 +96,57 @@ new Vue({
                 }]
             }
         },
+        main: {
+            advantages: {
+                cards: [{
+                    items: [{
+                        class: "users circled",
+                        type: "icon"
+                    },
+                    {
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
+                    },
+                    {
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                        type: "paragraph"
+                    }]
+                },
+                {
+                    items: [{
+                        class: "chart circled",
+                        type: "icon"
+                    },
+                    {
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
+                    },
+                    {
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                        type: "paragraph"
+                    }]
+                },
+                {
+                    items: [{
+                        class: "tachometer circled",
+                        type: "icon"
+                    },
+                    {
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
+                    },
+                    {
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iure molestiae molestias nesciunt quos velit.",
+                        type: "paragraph"
+                    }]
+                }]
+            }
+        },
         getItems (item) {
             switch (item.type) {
-                case "icon-text": return `<i class="${item.class}"></i> 
-                                     <p>${item.text}</p>`;
                 case "link": return `<a href="${item.href}">${item.text}</a>`;
                 case "button": return `<button class="${item.class}">${item.text}</button>`;
                 case "icons":
@@ -107,7 +155,10 @@ new Vue({
                         content += `<a href="${social.href}"><i class="${social.prefix} ${social.class}"></i></a>`;
                     });
                     return content;
-                case "h1": return `<h1>${item.text}</h1>`;
+                case "icon": return `<i class="${item.class}"></i>`;
+                case "icon-text": return `<i class="${item.class}"></i> 
+                                     <p>${item.text}</p>`;
+                case "h": return `<h${item.strongness}>${item.text}</h${item.strongness}>`;
                 case "paragraph": return `<p>${item.text}</p>`;
             }
         }

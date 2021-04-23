@@ -5,6 +5,10 @@
   align-items: $align-items;
 }
 
+@mixin flexBasis($grow, $shrink, $basis) {
+  flex: $grow $shrink $basis;
+}
+
 @mixin sticky {
   position: fixed;
   z-index: 3;

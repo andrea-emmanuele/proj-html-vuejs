@@ -38,9 +38,15 @@
             </section>
         </header>
         <main>
-            <div class="content">
-
-            </div>
+            <section id="advantages">
+                <div class="content">
+                    <div class="cards">
+                        <div class="card" v-for="(item, i) in main.advantages.cards">
+                            <div class="item" v-for="item in main.advantages.cards[i].items" v-html="getItems(item)"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="content">
