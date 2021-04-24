@@ -7,6 +7,7 @@
  */
 .fa,
 .fas,
+body section .content .cards .card ul li:after,
 i,
 .far,
 i.edit:before,
@@ -23,7 +24,7 @@ i.fab {
   line-height: 1;
 }
 
-i {
+body section .content .cards .card ul li:after, i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -125,6 +126,7 @@ i {
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+body section .content .cards .card ul li.fa-pull-left:after,
 i.fa-pull-left,
 .far.fa-pull-left,
 i.fa-pull-left.edit:before,
@@ -134,6 +136,7 @@ i.fa-pull-left.edit:before,
 }
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+body section .content .cards .card ul li.fa-pull-right:after,
 i.fa-pull-right,
 .far.fa-pull-right,
 i.fa-pull-right.edit:before,
@@ -6098,6 +6101,7 @@ readers do not read off random characters that represent icons */
 }
 .fa,
 .fas,
+body section .content .cards .card ul li:after,
 i {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -6239,6 +6243,38 @@ i.globe:before {
 i.folder:before {
   content: "";
 }
+i.rocket:before {
+  content: "";
+}
+i.gem:before {
+  content: "";
+}
+
+.most-popular:before {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  font-size: 0.95rem;
+  color: #fff;
+  background: #41c457;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0 5rem 5rem 0;
+  width: 60px;
+  content: "Most Popular";
+  display: block;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.w70 {
+  width: 70%;
+}
+
+.centered {
+  margin: 0 auto;
+}
 
 * {
   padding: 0;
@@ -6331,6 +6367,7 @@ body section .content .cards {
   flex-wrap: wrap;
 }
 body section .content .cards .card {
+  position: relative;
   padding: 3rem 2.5rem;
   border-radius: 0.8rem;
   flex: 0 0 calc(95% / 3);
@@ -6347,6 +6384,36 @@ body section .content .cards .card p {
 }
 body section .content .cards .card button {
   margin-top: 2rem;
+}
+body section .content .cards .card span.price {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #058283;
+  margin-top: 1.5rem;
+  display: block;
+}
+body section .content .cards .card ul {
+  font-weight: 100;
+  list-style: none;
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+}
+body section .content .cards .card ul li {
+  position: relative;
+  margin-top: 1rem;
+}
+body section .content .cards .card ul li:after {
+  position: absolute;
+  right: 0;
+  color: #058283;
+  display: inline-block;
+}
+body section .content .cards .card ul li.checked:after {
+  content: "";
+}
+body section .content .cards .card ul li.unchecked:after {
+  content: "";
 }
 body section.primary {
   background: #fff;
@@ -6371,9 +6438,16 @@ body section.secondary .cards .card {
 }
 body section.ternary {
   background: #eef4ed;
+  color: #21333e;
+}
+body section.ternary p {
+  margin-top: 1.5rem;
+}
+body section.ternary .cards {
+  margin-top: 2rem;
 }
 body section.ternary .cards .card {
-  color: #21333e;
+  margin-top: 2rem;
   background: #fff;
 }
 

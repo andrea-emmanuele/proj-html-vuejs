@@ -145,4 +145,16 @@ i {
       content: "\f07c";
     }
   }
+
+  &.rocket {
+    &:before {
+      content: "\f135";
+    }
+  }
+
+  &.gem {
+    &:before {
+      content: "\f3a5";
+    }
+  }
 }

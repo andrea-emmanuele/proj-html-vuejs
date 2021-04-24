@@ -104,6 +104,7 @@ body {
         flex-wrap: wrap;
 
         .card {
+          position: relative;
           padding: $card-spacing;
           border-radius: $card-radius;
 
@@ -127,6 +128,49 @@ body {
             margin-top: $much;
           }
 
+          span {
+            &.price {
+              font-size: $card-price-size;
+              font-weight: $bold;
+              color: $icons-color;
+              margin-top: $more;
+              display: block;
+            }
+          }
+
+          ul {
+            font-weight: $light;
+            list-style: none;
+            text-align: left;
+            margin-top: $more;
+            margin-left: $normal;
+
+            li {
+              position: relative;
+              margin-top: $normal;
+
+              &:after {
+                @extend %fa-icon;
+                @extend .fas;
+                position: absolute;
+                right: 0;
+                color: $icons-color;
+                display: inline-block;
+              }
+
+              &.checked {
+                &:after {
+                  content: "\f00c";
+                }
+              }
+
+              &.unchecked {
+                &:after {
+                  content: "\f00d";
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -160,10 +204,17 @@ body {
 
     &.ternary {
       background: $theme-ternary-color;
+      color: $secondary-color;
+
+      p {
+        margin-top: $more;
+      }
 
       .cards {
+        margin-top: $much;
+
         .card {
-          color: $secondary-color;
+          margin-top: $much;
           background: $theme-primary-color;
         }
       }

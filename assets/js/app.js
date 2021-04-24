@@ -332,6 +332,140 @@ new Vue({
                             class: "secondary"
                         }]
                 }]
+            },
+            plans: {
+                items: [{
+                    text: "monthly plans",
+                    type: "span",
+                    class: "primary"
+                    },
+                    {
+                        text: "<span class='wrapper'>Pricing</span>Table",
+                        type: "h",
+                        strongness: "1"
+                    },
+                    {
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur distinctio dolorem dolorum error esse fuga ipsum quaerat quo repudiandae voluptatibus!",
+                        type: "paragraph"
+                    }],
+                cards: [{
+                    items: [{
+                        class: "rocket",
+                        type: "icon"
+                    },
+                    {
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
+                    },
+                    {
+                        text: "$490/mo",
+                        type: "span",
+                        class: "price"
+                    },
+                    {
+                        list: [{
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "unchecked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "unchecked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "unchecked"
+                        }],
+                        type: "list"
+                    }]
+                },
+                {
+                    items: [{
+                        class: "briefcase",
+                        type: "icon"
+                    },
+                    {
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
+                    },
+                    {
+                        text: "$890/mo",
+                        type: "span",
+                        class: "price"
+                    },
+                    {
+                        list: [{
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "unchecked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "unchecked"
+                        }],
+                        type: "list"
+                    }],
+                    class: "most-popular"
+                },
+                {
+                    items: [{
+                        class: "gem",
+                        type: "icon"
+                    },
+                    {
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
+                    },
+                    {
+                        text: "$1390/mo",
+                        type: "span",
+                        class: "price"
+                    },
+                    {
+                        list: [{
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        },
+                        {
+                            text: "Lorem ipsum.",
+                            class: "checked"
+                        }],
+                        type: "list"
+                    }]
+                }]
             }
         },
         getItems (item) {
@@ -356,6 +490,12 @@ new Vue({
                 case "h": return `<h${item.strongness}>${item.text}</h${item.strongness}>`;
                 case "paragraph": return `<p>${item.text}</p>`;
                 case "span": return `<span class="${item.class}">${item.text}</span>`;
+                case "list": let listItems = "";
+                                item.list.forEach(itemList => {
+                                    listItems += `<li class="${itemList.class}">${itemList.text}</li>`;
+                                });
+                                listItems = `<ul>${listItems}</ul>`;
+                                return listItems ;
             }
         }
     }

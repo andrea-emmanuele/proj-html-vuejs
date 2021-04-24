@@ -1,0 +1,15 @@
+.most-popular {
+  &:before {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    font-size: $thin-size;
+    color: $primary-color;
+    background: $ternary-color;
+    padding: $little $little;
+    border-radius: $card-badge-radius;
+    width: $card-badge-size;
+    content: "Most Popular";
+    display: block;
+  }
+}

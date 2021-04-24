@@ -72,6 +72,16 @@
                     </div>
                 </div>
             </section>
+            <section id="plans" class="ternary">
+                <div class="content">
+                    <div class="item centered text-centered w70" v-for="item in main.plans.items" v-html="getItems(item)"></div>
+                    <div class="cards">
+                        <div class="card" v-for="(card, i) in main.plans.cards" :class="card.class">
+                            <div class="item text-centered" v-for="item in main.plans.cards[i].items" v-html="getItems(item)"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="content">
