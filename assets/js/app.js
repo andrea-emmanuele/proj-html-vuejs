@@ -466,6 +466,51 @@ new Vue({
                         type: "list"
                     }]
                 }]
+            },
+            editorial: {
+                items: [{
+                    text: "our editorial content",
+                    type: "span",
+                    class: "primary"
+                },
+                {
+                    text: "Latest <span class='wrapper'>News</span>",
+                    type: "h",
+                    strongness: "1"
+                }],
+                itemsGroup: [{
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi repellendus vero!",
+                    type: "paragraph"
+                },
+                {
+                    text: "see all",
+                    type: "button",
+                    class: "primary"
+                }],
+                cards: [{
+                    imagePath: "background: url('assets/images/news-1.jpg')",
+                    items: [{
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                        type: "h",
+                        strongness: "2"
+                    }]
+                },
+                {
+                    imagePath: "background: url('assets/images/news-2.jpg')",
+                    items: [{
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi!",
+                        type: "h",
+                        strongness: "2"
+                    }]
+                },
+                {
+                    imagePath: "background: url('assets/images/news-3.jpg')",
+                    items: [{
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                        type: "h",
+                        strongness: "2"
+                    }]
+                }]
             }
         },
         scrollYTarget: 102,

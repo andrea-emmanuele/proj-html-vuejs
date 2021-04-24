@@ -6,5 +6,11 @@ section#inner-top {
     height: 100%;
     @include flex(row, space-between, center);
     @include headerContent($header-primary-color, $thin-size, $more);
+
+    i {
+      &:before {
+        color: $header-primary-color;
+      }
+    }
   }
 }

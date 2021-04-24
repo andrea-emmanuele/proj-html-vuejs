@@ -60,6 +60,7 @@ body {
         cursor: pointer;
 
         &.primary {
+          color: $primary-color;
           background: $button-primary-color;
         }
 
@@ -94,7 +95,7 @@ body {
           margin-top: $more;
 
           p {
-            width: 80%;
+            padding-right: 12rem;
           }
         }
       }
@@ -113,6 +114,31 @@ body {
 
           &.most-popular {
             transform: scale(1.02, 1.08);
+          }
+
+          &.img {
+            position: relative;
+            color: $primary-color;
+            background-size: cover !important;
+            height: 350px;
+            overflow: hidden;
+
+            &:after {
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: rgba(0, 0, 0, $card-img-overlay-opacity);
+              width: 100%;
+              height: 100%;
+              content: "";
+            }
+
+            .item {
+              position: absolute;
+              bottom: 30px;
+              left: 0;
+              z-index: 1;
+            }
           }
 
           i {
@@ -185,6 +211,14 @@ body {
 
       p {
         margin-top: $more;
+      }
+
+      .cards {
+        margin-top: $much;
+
+        .card {
+          margin-top: $much;
+        }
       }
     }
 

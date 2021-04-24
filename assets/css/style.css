@@ -6332,6 +6332,7 @@ body section .content button {
   cursor: pointer;
 }
 body section .content button.primary {
+  color: #fff;
   background: #058283;
 }
 body section .content button.secondary {
@@ -6362,7 +6363,7 @@ body section .content .inner-content.inline {
   margin-top: 1.5rem;
 }
 body section .content .inner-content.inline p {
-  width: 80%;
+  padding-right: 12rem;
 }
 body section .content .cards {
   display: flex;
@@ -6379,6 +6380,28 @@ body section .content .cards .card {
 }
 body section .content .cards .card.most-popular {
   transform: scale(1.02, 1.08);
+}
+body section .content .cards .card.img {
+  position: relative;
+  color: #fff;
+  background-size: cover !important;
+  height: 350px;
+  overflow: hidden;
+}
+body section .content .cards .card.img:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+body section .content .cards .card.img .item {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  z-index: 1;
 }
 body section .content .cards .card i {
   font-size: 2rem;
@@ -6429,6 +6452,12 @@ body section.primary {
 }
 body section.primary p {
   margin-top: 1.5rem;
+}
+body section.primary .cards {
+  margin-top: 2rem;
+}
+body section.primary .cards .card {
+  margin-top: 2rem;
 }
 body section.secondary {
   background: #111117;
@@ -6496,6 +6525,9 @@ header section#inner-top .content [class^=inner-] .item:last-of-type {
 }
 header section#inner-top .content [class^=inner-] .item i {
   margin-right: 0.5rem;
+}
+header section#inner-top .content i:before {
+  color: #c0c3d0;
 }
 header section#inner-main {
   position: fixed;
@@ -6610,6 +6642,12 @@ header section#jumbo .content .actions button.secondary {
   margin-right: 0;
 }
 
+main section#advantages .content .cards {
+  margin-top: unset;
+}
+main section#advantages .content .cards .card {
+  margin-top: unset;
+}
 main section#about {
   position: relative;
 }

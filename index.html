@@ -7,7 +7,7 @@
 </head>
 <body>
     <section id="application">
-        <header @scroll="setHeader()">
+        <header>
             <section id="inner-top">
                 <div class="content">
                     <div class="inner-left">
@@ -41,8 +41,8 @@
             <section id="advantages" class="ternary">
                 <div class="content">
                     <div class="cards">
-                        <div class="card" v-for="(item, i) in main.advantages.cards">
-                            <div class="item" v-for="item in main.advantages.cards[i].items" v-html="getItems(item)"></div>
+                        <div class="card" v-for="card in main.advantages.cards">
+                            <div class="item" v-for="item in card.items" v-html="getItems(item)"></div>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                     <div class="inner-content">
                         <div class="item" v-for="item in main.about.items" v-html="getItems(item)"></div>
                         <div class="inner-container">
-                            <div class="item-container" v-for="(item, i) in main.about.items[main.about.items.length - 1].innerContainer.iconHeadings" v-html="getItems(item)"></div>
+                            <div class="item-container" v-for="item in main.about.items[main.about.items.length - 1].innerContainer.iconHeadings" v-html="getItems(item)"></div>
                         </div>
                     </div>
                 </div>
@@ -65,8 +65,8 @@
                     </div>
                     <div class="inner-content">
                         <div class="cards">
-                            <div class="card" v-for="(item, i) in main.services.cards">
-                                <div class="item" v-for="item in main.services.cards[i].items" v-html="getItems(item)"></div>
+                            <div class="card" v-for="card in main.services.cards">
+                                <div class="item" v-for="item in card.items" v-html="getItems(item)"></div>
                             </div>
                         </div>
                     </div>
@@ -76,15 +76,25 @@
                 <div class="content">
                     <div class="item centered text-centered w70" v-for="item in main.plans.items" v-html="getItems(item)"></div>
                     <div class="cards">
-                        <div class="card" v-for="(card, i) in main.plans.cards" :class="card.class">
-                            <div class="item text-centered" v-for="item in main.plans.cards[i].items" v-html="getItems(item)"></div>
+                        <div class="card" v-for="card in main.plans.cards" :class="card.class">
+                            <div class="item text-centered" v-for="item in card.items" v-html="getItems(item)"></div>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="editorial" class="primary">
                 <div class="content">
-
+                    <div class="item" v-for="item in main.editorial.items" v-html="getItems(item)"></div>
+                    <div class="inner-content inline">
+                        <div class="item" v-for="item in main.editorial.itemsGroup" v-html="getItems(item)"></div>
+                    </div>
+                    <div class="inner-content">
+                        <div class="cards">
+                            <div class="card img" v-for="card in main.editorial.cards" :style="card.imagePath">
+                                <div class="item text-centered" v-for="item in card.items" v-html="getItems(item)"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
