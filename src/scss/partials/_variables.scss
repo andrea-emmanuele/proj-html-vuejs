@@ -3,6 +3,9 @@ $theme-primary-color: #fff;
 $theme-secondary-color: #111117;
 $theme-ternary-color: #eef4ed;
 $header-inner-top-color: #21333e;
+:export {
+  headerInnerTopColor: $header-inner-top-color;
+}
 $icons-bg-color: #daeced;
 $icons-color: #058283;
 

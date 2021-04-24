@@ -468,6 +468,7 @@ new Vue({
                 }]
             }
         },
+        scrollYTarget: 102,
         getItems (item) {
             console.log(item.type);
             switch (item.type) {
@@ -498,5 +499,21 @@ new Vue({
                                 return listItems ;
             }
         }
+    },
+    methods: {
+        fixMainHeaderToTop() {
+            let mainHeader = document.querySelector("header > section#inner-main");
+
+            if (window.scrollY >= this.scrollYTarget) {
+                mainHeader.style.top = "0";
+                mainHeader.style.background = variables.headerInnerTopColor;
+            }
+            else if (window.scrollY < this.scrollYTarget) {
+                mainHeader.style.top = "unset";
+            }
+        }
+    },
+    created() {
+        window.addEventListener("scroll", this.fixMainHeaderToTop);
     }
 });

@@ -6143,6 +6143,10 @@ i {
 
 /*partials*/
 /*theme colors*/
+:export {
+  headerInnerTopColor: #21333e;
+}
+
 /*text colors*/
 /*fonts*/
 /*font sizes*/
@@ -6371,6 +6375,9 @@ body section .content .cards .card {
   padding: 3rem 2.5rem;
   border-radius: 0.8rem;
   flex: 0 0 calc(95% / 3);
+}
+body section .content .cards .card.most-popular {
+  transform: scale(1.02, 1.08);
 }
 body section .content .cards .card i {
   font-size: 2rem;

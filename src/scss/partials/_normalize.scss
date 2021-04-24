@@ -111,6 +111,10 @@ body {
           $width: calc(95% / 3);
           @include flexBasis(0, 0, $width);
 
+          &.most-popular {
+            transform: scale(1.02, 1.08);
+          }
+
           i {
             font-size: $main-icons-size;
           }
