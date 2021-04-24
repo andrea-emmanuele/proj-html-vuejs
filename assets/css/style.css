@@ -6143,10 +6143,6 @@ i {
 
 /*partials*/
 /*theme colors*/
-:export {
-  headerInnerTopColor: #21333e;
-}
-
 /*text colors*/
 /*fonts*/
 /*font sizes*/
@@ -6160,6 +6156,11 @@ i {
 /*cards*/
 /*p*/
 /*paths*/
+/*css variables*/
+:root {
+  --header-inner-top-color: #21333e;
+}
+
 /*header sections*/
 i {
   color: #058283 !important;
@@ -6498,7 +6499,7 @@ header section#inner-top .content [class^=inner-] .item i {
 }
 header section#inner-main {
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
   height: 100px;
   text-transform: uppercase;

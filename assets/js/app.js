@@ -503,13 +503,15 @@ new Vue({
     methods: {
         fixMainHeaderToTop() {
             let mainHeader = document.querySelector("header > section#inner-main");
+            let mainHeaderColor = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-top-color");
 
             if (window.scrollY >= this.scrollYTarget) {
                 mainHeader.style.top = "0";
-                mainHeader.style.background = variables.headerInnerTopColor;
+                mainHeader.style.background = mainHeaderColor;
             }
             else if (window.scrollY < this.scrollYTarget) {
                 mainHeader.style.top = "unset";
+                mainHeader.style.background = "unset";
             }
         }
     },

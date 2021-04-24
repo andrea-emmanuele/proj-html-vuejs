@@ -3,9 +3,6 @@ $theme-primary-color: #fff;
 $theme-secondary-color: #111117;
 $theme-ternary-color: #eef4ed;
 $header-inner-top-color: #21333e;
-:export {
-  headerInnerTopColor: $header-inner-top-color;
-}
 $icons-bg-color: #daeced;
 $icons-color: #058283;
 
@@ -88,4 +85,10 @@ $line-height-tall: 1.65rem;
 /*paths*/
 $jumbo-path: "../images/jumbo.png";
 $about-image-path: "../images/about-3.jpg";
+
+/*css variables*/
+
+:root {
+  --header-inner-top-color: #{$header-inner-top-color};
+}
 
