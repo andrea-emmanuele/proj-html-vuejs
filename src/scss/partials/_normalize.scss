@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $primary-font;
   color: $primary-color;
@@ -50,7 +54,7 @@ body {
         text-decoration: none;
       }
 
-      button {
+      button, .item.primary > a {
         all: unset;
         font-weight: $bolder;
         text-transform: uppercase;
@@ -78,6 +82,15 @@ body {
           background: $button-hover-color;
         }
 
+      }
+
+      .item {
+        &.primary {
+          a {
+            color: $primary-color;
+            background: $button-primary-color;
+          }
+        }
       }
 
       form {

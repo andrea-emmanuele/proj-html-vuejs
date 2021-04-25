@@ -52,7 +52,7 @@ $sections-spacing: 7rem;
 $newsletter-content-spacing: 0 5rem;
 
 /*brand*/
-$brand-color: #41c457;
+$brand-color: $ternary-color;
 $letter-spacing: .3rem;
 $span-opacity: .6;
 $span-padding: .75rem 0 .75rem 2rem;
@@ -99,5 +99,7 @@ $newsletter-background-image-path: "../images/bg-1.jpg";
 
 :root {
   --header-inner-top-color: #{$header-inner-top-color};
+  --header-inner-top-height: #{$header-inner-top-height};
+  --header-inner-main-height: #{$header-inner-main-height};
 }
 

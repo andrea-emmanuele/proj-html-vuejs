@@ -6160,6 +6160,8 @@ i {
 /*css variables*/
 :root {
   --header-inner-top-color: #21333e;
+  --header-inner-top-height: 50px;
+  --header-inner-main-height: 100px;
 }
 
 /*header sections*/
@@ -6330,6 +6332,10 @@ i.gem:before {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #fff;
@@ -6365,7 +6371,7 @@ body section .content a {
   color: unset;
   text-decoration: none;
 }
-body section .content button {
+body section .content button, body section .content .item.primary > a {
   all: unset;
   font-weight: 500;
   text-transform: uppercase;
@@ -6375,19 +6381,23 @@ body section .content button {
   transition: all 300ms ease-in-out;
   cursor: pointer;
 }
-body section .content button.primary {
+body section .content button.primary, body section .content .item.primary > a.primary {
   color: #fff;
   background: #058283;
 }
-body section .content button.secondary {
+body section .content button.secondary, body section .content .item.primary > a.secondary {
   background: transparent;
   border: 1px solid #058283;
 }
-body section .content button.secondary:hover {
+body section .content button.secondary:hover, body section .content .item.primary > a.secondary:hover {
   border: 1px solid #41c457;
 }
-body section .content button:hover {
+body section .content button:hover, body section .content .item.primary > a:hover {
   background: #41c457;
+}
+body section .content .item.primary a {
+  color: #fff;
+  background: #058283;
 }
 body section .content form {
   display: flex;
@@ -6665,7 +6675,6 @@ header section#inner-main .content .inner-left .brand span {
   padding: 0.75rem 0 0.75rem 2rem;
   border-radius: 5rem 0 0 5rem;
   margin-right: 0.2rem;
-  display: block;
 }
 header section#inner-main .content .inner-right .item {
   font-weight: 500;
@@ -6720,11 +6729,8 @@ header section#jumbo .content .actions {
   align-items: center;
   margin-top: 3rem;
 }
-header section#jumbo .content .actions button {
+header section#jumbo .content .actions .item a {
   margin-right: 1.5rem;
-}
-header section#jumbo .content .actions button.secondary {
-  margin-right: 0;
 }
 
 main section#advantages .content .cards {

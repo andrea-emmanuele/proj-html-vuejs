@@ -43,11 +43,9 @@ section#jumbo {
       @include flex(row, center, center);
       margin-top: $more-than-much;
 
-      button {
-        margin-right: $more;
-
-        &.secondary {
-          margin-right: 0;
+      .item {
+        a {
+          margin-right: $more;
         }
       }
     }

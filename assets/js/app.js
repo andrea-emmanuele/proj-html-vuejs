@@ -42,7 +42,7 @@ new Vue({
                 }
             },
             main: {
-                brandName: "<span>nex</span>gen",
+                brandName: "<a href='index.html'><span>nex</span>gen</a>",
                 navigationItems: [{
                     text: "home",
                     type: "link",
@@ -51,26 +51,27 @@ new Vue({
                     {
                         text: "about",
                         type: "link",
-                        href: "#"
+                        href: "#about"
                     },
                     {
                         text: "services",
                         type: "link",
-                        href: "#"
+                        href: "#services"
                     },
                     {
                         text: "pricing",
                         type: "link",
-                        href: "#"
+                        href: "#plans"
                     },
                     {
                         text: "blog",
                         type: "link",
-                        href: "#"
+                        href: "#blog"
                     },
                     {
                         text: "get in touch",
-                        type: "button",
+                        type: "link",
+                        href: "#get-in-touch",
                         class: "primary"
                     }]
             },
@@ -86,7 +87,8 @@ new Vue({
                 }],
                 actions: [{
                     text: "get in touch",
-                    type: "button",
+                    type: "link",
+                    href: "#get-in-touch",
                     class: "primary"
                 },
                 {
@@ -544,7 +546,7 @@ new Vue({
                 }]
             }
         },
-        scrollYTargets: [204, 50],
+        scrollYTargets: [],
         scrolling: false,
         getItems (item) {
             switch (item.type) {
@@ -581,6 +583,11 @@ new Vue({
         fixMainHeaderToTop() {
             let mainHeader = document.querySelector("header > section#inner-main");
             let mainHeaderColor = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-top-color");
+            let mainHeaderHeight = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-main-height");
+            let topHeaderHeight = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-top-height");
+
+            this.scrollYTargets.push(parseInt(mainHeaderHeight));
+            this.scrollYTargets.push(parseInt(topHeaderHeight));
 
             if (window.scrollY >= this.scrollYTargets[0]) {
                 mainHeader.style.position = "fixed";
