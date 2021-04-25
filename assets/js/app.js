@@ -544,7 +544,8 @@ new Vue({
                 }]
             }
         },
-        scrollYTarget: 102,
+        scrollYTargets: [204, 50],
+        scrolling: false,
         getItems (item) {
             switch (item.type) {
                 case "link": return `<a href="${item.href}">${item.text}</a>`;
@@ -581,13 +582,17 @@ new Vue({
             let mainHeader = document.querySelector("header > section#inner-main");
             let mainHeaderColor = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-top-color");
 
-            if (window.scrollY >= this.scrollYTarget) {
-                mainHeader.style.top = "0";
+            if (window.scrollY >= this.scrollYTargets[0]) {
+                mainHeader.style.position = "fixed";
+                mainHeader.style.animation = "bouncedown 300ms ease-in-out forwards";
                 mainHeader.style.background = mainHeaderColor;
+                this.scrolling = true;
             }
-            else if (window.scrollY < this.scrollYTarget) {
-                mainHeader.style.top = "unset";
-                mainHeader.style.background = "unset";
+            else if (this.scrolling && window.scrollY < this.scrollYTargets[1]) {
+                mainHeader.style.position = "absolute";
+                mainHeader.style.animation = "movetostartposition 300ms linear forwards";
+                mainHeader.style.background = "transparent";
+                this.scrolling = false;
             }
         }
     },

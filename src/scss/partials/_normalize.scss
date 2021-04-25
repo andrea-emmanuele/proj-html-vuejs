@@ -57,6 +57,7 @@ body {
         padding: $button-spacing;
         border-radius: $button-radius;
         white-space: nowrap;
+        transition: all 300ms ease-in-out;
         cursor: pointer;
 
         &.primary {
@@ -67,6 +68,14 @@ body {
         &.secondary {
           background: $button-secondary-color;
           border: 1px solid $button-primary-color;
+
+          &:hover {
+            border: 1px solid $button-hover-color;
+          }
+        }
+
+        &:hover {
+          background: $button-hover-color;
         }
 
       }
@@ -216,6 +225,14 @@ body {
               }
             }
           }
+
+          &:hover {
+            animation: moveontop 300ms linear forwards;
+          }
+
+          &:not(hover) {
+            animation: moveonbottom 300ms linear forwards;
+          }
         }
       }
     }
@@ -251,6 +268,22 @@ body {
           color: $primary-color;
           background: $card-secondary-color;
           margin-top: $much;
+
+          i {
+            transition: color 250ms ease-in-out;
+          }
+
+          p {
+            font-weight: unset;
+            color: $header-primary-color;
+            transition: color 250ms ease-in-out;
+          }
+
+          &:hover {
+            i, p {
+              color: $primary-color !important;
+            }
+          }
         }
       }
     }

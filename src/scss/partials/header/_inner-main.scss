@@ -1,8 +1,11 @@
 section#inner-main {
-  @include sticky;
+  position: absolute;
+  top: $header-inner-top-height;
+  background: transparent;
   width: 100%;
-  height: 100px;
+  height: $header-inner-main-height;
   text-transform: uppercase;
+  z-index: 4;
 
   .content {
     @include headerContent($header-secondary-color, $normal-size, $much);

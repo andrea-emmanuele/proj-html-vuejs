@@ -1,0 +1,45 @@
+/*header main*/
+@keyframes bouncedown {
+  0% {
+    top: -100%;
+  }
+  80% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes movetostartposition {
+  0% {
+    top: $header-inner-top-height + 20px;
+    background: $header-inner-top-color;
+  }
+  80% {
+    top: $header-inner-top-height + 5px;
+  }
+  100% {
+    top: $header-inner-top-height;
+    background: transparent;
+  }
+}
+
+/*cards*/
+@keyframes moveontop {
+  from {
+    top: 0;
+  }
+  to {
+    top: $card-hover-position;
+  }
+}
+
+@keyframes moveonbottom {
+  from {
+    top: $card-hover-position;
+  }
+  to {
+    top: 0;
+  }
+}

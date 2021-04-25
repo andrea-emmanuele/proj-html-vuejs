@@ -9,11 +9,6 @@
   flex: $grow $shrink $basis;
 }
 
-@mixin sticky {
-  position: fixed;
-  z-index: 4;
-}
-
 /*header sections*/
 
 @mixin headerContent($color, $font-size, $margin-right) {

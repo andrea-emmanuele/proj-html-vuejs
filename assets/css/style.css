@@ -6163,6 +6163,48 @@ i {
 }
 
 /*header sections*/
+/*header main*/
+@keyframes bouncedown {
+  0% {
+    top: -100%;
+  }
+  80% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes movetostartposition {
+  0% {
+    top: 70px;
+    background: #21333e;
+  }
+  80% {
+    top: 55px;
+  }
+  100% {
+    top: 50px;
+    background: transparent;
+  }
+}
+/*cards*/
+@keyframes moveontop {
+  from {
+    top: 0;
+  }
+  to {
+    top: -15px;
+  }
+}
+@keyframes moveonbottom {
+  from {
+    top: -15px;
+  }
+  to {
+    top: 0;
+  }
+}
 i {
   color: #058283 !important;
   /*header*/
@@ -6330,6 +6372,7 @@ body section .content button {
   padding: 0.9rem 2rem;
   border-radius: 0.3rem;
   white-space: nowrap;
+  transition: all 300ms ease-in-out;
   cursor: pointer;
 }
 body section .content button.primary {
@@ -6339,6 +6382,12 @@ body section .content button.primary {
 body section .content button.secondary {
   background: transparent;
   border: 1px solid #058283;
+}
+body section .content button.secondary:hover {
+  border: 1px solid #41c457;
+}
+body section .content button:hover {
+  background: #41c457;
 }
 body section .content form {
   display: flex;
@@ -6463,6 +6512,12 @@ body section .content .cards .card ul li.checked:after {
 body section .content .cards .card ul li.unchecked:after {
   content: "";
 }
+body section .content .cards .card:hover {
+  animation: moveontop 300ms linear forwards;
+}
+body section .content .cards .card:not(hover) {
+  animation: moveonbottom 300ms linear forwards;
+}
 body section.primary {
   background: #fff;
   color: #21333e;
@@ -6489,6 +6544,17 @@ body section.secondary .cards .card {
   color: #fff;
   background: #19191f;
   margin-top: 2rem;
+}
+body section.secondary .cards .card i {
+  transition: color 250ms ease-in-out;
+}
+body section.secondary .cards .card p {
+  font-weight: unset;
+  color: #c0c3d0;
+  transition: color 250ms ease-in-out;
+}
+body section.secondary .cards .card:hover i, body section.secondary .cards .card:hover p {
+  color: #fff !important;
 }
 body section.ternary {
   background: #eef4ed;
@@ -6547,11 +6613,13 @@ header section#inner-top .content i:before {
   color: #c0c3d0;
 }
 header section#inner-main {
-  position: fixed;
-  z-index: 4;
+  position: absolute;
+  top: 50px;
+  background: transparent;
   width: 100%;
   height: 100px;
   text-transform: uppercase;
+  z-index: 4;
 }
 header section#inner-main .content {
   height: 100%;

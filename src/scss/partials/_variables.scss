@@ -35,6 +35,7 @@ $boldest: 900;
 /*sizes*/
 $content-width: 1135px;
 $header-inner-top-height: 50px;
+$header-inner-main-height: 100px;
 $jumbo-height: 875px;
 $jumbo-content-width: 800px;
 $icon-sizes: 70px;
@@ -63,6 +64,7 @@ $jumbo-overlay-opacity: .7;
 /*buttons*/
 $button-primary-color: #058283;
 $button-secondary-color: transparent;
+$button-hover-color: $ternary-color;
 $button-spacing: .9rem 2rem;
 $button-radius: .3rem;
 
@@ -80,6 +82,7 @@ $card-p-line-height: 1.65rem;
 $card-badge-size: 60px;
 $card-badge-radius: 0 5rem 5rem 0;
 $card-img-overlay-opacity: .45;
+$card-hover-position: -15px;
 
 /*p*/
 $line-height-tall: 1.65rem;
