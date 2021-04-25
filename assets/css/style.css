@@ -6155,6 +6155,7 @@ i {
 /*wrapper*/
 /*cards*/
 /*p*/
+/*form*/
 /*paths*/
 /*css variables*/
 :root {
@@ -6338,6 +6339,22 @@ body section .content button.primary {
 body section .content button.secondary {
   background: transparent;
   border: 1px solid #058283;
+}
+body section .content form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+body section .content form input {
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1rem 1rem;
+  border: unset;
+  border-radius: 0.3rem;
+  outline: none;
+  margin-bottom: 1rem;
 }
 body section .content .wrapper {
   background: rgba(50, 71, 50, 0.1);
@@ -6677,6 +6694,31 @@ main section#about .inner-content .inner-container {
 main section#about .inner-content .inner-container .item-container {
   flex: 0 0 48%;
   margin-top: 3rem;
+}
+main section#newsletter {
+  background: url("../images/bg-1.jpg") no-repeat center;
+}
+main section#newsletter .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  padding: 0 5rem;
+}
+main section#newsletter .content p {
+  font-weight: unset;
+  color: #c0c3d0;
+  margin-top: 2rem;
+  padding-right: 6rem;
+}
+main section#newsletter .content .inner-content {
+  flex: 0 0 50%;
+}
+main section#newsletter .content .inner-content form .item {
+  flex: 0 0 90%;
+}
+main section#newsletter .content .inner-content form .item input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

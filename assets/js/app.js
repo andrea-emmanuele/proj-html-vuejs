@@ -511,11 +511,41 @@ new Vue({
                         strongness: "2"
                     }]
                 }]
+            },
+            newsletter: {
+                items: [{
+                    text: "newsletter",
+                    type: "span",
+                    class: "primary"
+                },
+                {
+                    text: "<span class='wrapper'>Know</span> First",
+                    type: "h",
+                    strongness: "1"
+                },
+                {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur distinctio.",
+                    type: "paragraph"
+                }],
+                form: [{
+                    placeholder: "Name",
+                    type: "input",
+                    inputType: "text"
+                },
+                {
+                    placeholder: "Email",
+                    type: "input",
+                    inputType: "email"
+                },
+                {
+                    text: "subscribe",
+                    type: "button",
+                    class: "primary"
+                }]
             }
         },
         scrollYTarget: 102,
         getItems (item) {
-            console.log(item.type);
             switch (item.type) {
                 case "link": return `<a href="${item.href}">${item.text}</a>`;
                 case "button": return `<button class="${item.class}">${item.text}</button>`;
@@ -542,6 +572,7 @@ new Vue({
                                 });
                                 listItems = `<ul>${listItems}</ul>`;
                                 return listItems ;
+                case "input": return `<input type="${item.inputType}" placeholder="${item.placeholder}">`;
             }
         }
     },

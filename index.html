@@ -97,6 +97,18 @@
                     </div>
                 </div>
             </section>
+            <section id="newsletter" class="secondary">
+                <div class="content">
+                    <div class="inner-content">
+                        <div class="item" v-for="item in main.newsletter.items" v-html="getItems(item)"></div>
+                    </div>
+                    <div class="inner-content">
+                        <form>
+                            <div class="item" v-for="item in main.newsletter.form" v-html="getItems(item)"></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="content">

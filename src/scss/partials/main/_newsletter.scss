@@ -1,0 +1,29 @@
+section#newsletter {
+  background: url($newsletter-background-image-path) no-repeat center;
+
+  .content {
+    @include flex(row, center, end);
+    padding: $newsletter-content-spacing;
+
+    p {
+      font-weight: unset;
+      color: $header-primary-color;
+      margin-top: $much;
+      padding-right: 6rem;
+    }
+
+    .inner-content {
+      @include flexBasis(0, 0, 50%);
+
+      form {
+        .item {
+          @include flexBasis(0, 0, 90%);
+
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

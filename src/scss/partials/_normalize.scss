@@ -71,6 +71,21 @@ body {
 
       }
 
+      form {
+        @include flex(row, flex-start, flex-start);
+        flex-wrap: wrap;
+
+        input {
+          font-size: $normal-size;
+          background: rgba(255, 255, 255, .6);
+          padding: $input-spacing;
+          border: unset;
+          border-radius: $button-radius;
+          outline: none;
+          margin-bottom: $normal;
+        }
+      }
+
       .wrapper {
         background: rgba(50, 71, 50, $wrapper-primary-opacity);
         padding: $wrapper-padding;
