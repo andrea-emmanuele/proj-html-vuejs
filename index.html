@@ -122,9 +122,15 @@
             </section>
         </main>
         <footer>
-            <div class="content">
-
-            </div>
+            <section id="inner-footer" class="secondary">
+                <div class="content">
+                    <div class="inner-content" v-for="content in footer">
+                        <div class="brand" v-html="header.main.brandName"></div>
+                        <div class="item" v-for="item in content.items" v-html="getItems(item)"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="pie" class="secondary"></section>
         </footer>
     </section>
 

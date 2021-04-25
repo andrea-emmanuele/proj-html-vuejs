@@ -6351,10 +6351,10 @@ body {
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
-body main section {
+body main section, body footer section {
   padding: 7rem;
 }
-body main section span.primary {
+body main section span.primary, body footer section span.primary {
   font-size: 0.95rem;
   font-weight: 500;
   color: #41c457;
@@ -6362,15 +6362,15 @@ body main section span.primary {
   margin: 2rem 0;
   display: block;
 }
-body main section span.wrapper {
+body main section span.wrapper, body footer section span.wrapper {
   color: #058283;
   text-transform: unset;
   margin-right: 0.5rem;
 }
-body main section h1 {
+body main section h1, body footer section h1 {
   font-size: 3rem;
 }
-body main section p {
+body main section p, body footer section p {
   font-weight: 100;
   line-height: 1.65rem;
 }

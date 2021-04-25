@@ -627,6 +627,119 @@ new Vue({
                 }]
             }]
         },
+        footer: [{
+                items: [{
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ipsa.",
+                    type: "paragraph"
+                },
+                {
+                    text: "+1 333 3333-3333",
+                    class: "phone",
+                    type: "icon-text"
+                },
+                {
+                    text: "hello@example.com",
+                    class: "message",
+                    type: "icon-text"
+                },
+                {
+                    text: "Main Avenue, 987",
+                    class: "marker",
+                    type: "icon-text"
+                },
+                {
+                    text: "get in touch",
+                    type: "button",
+                    class: "secondary"
+                }]
+        },
+        {
+            items: [{
+                list: [{
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                }],
+                type: "list"
+            }]
+        },
+        {
+            items: [{
+                list: [{
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                }],
+                type: "list"
+            }]
+        },
+        {
+            items: [{
+                list: [{
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "checked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                },
+                {
+                    text: "Lorem ipsum.",
+                    class: "unchecked"
+                }],
+                type: "list"
+            }]
+        }],
         scrollYTargets: [],
         scrolling: false,
         getItems (item) {
