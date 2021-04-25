@@ -12,6 +12,10 @@ section#newsletter {
       padding-right: 6rem;
     }
 
+    .wrapper {
+      background: rgba(255, 255, 255, $wrapper-primary-opacity);
+    }
+
     .inner-content {
       @include flexBasis(0, 0, 50%);
 
