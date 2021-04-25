@@ -38,7 +38,9 @@ $header-inner-top-height: 50px;
 $header-inner-main-height: 100px;
 $jumbo-height: 875px;
 $jumbo-content-width: 800px;
-$icon-sizes: 70px;
+$icon-primary-size: 70px;
+$icon-secondary-size: 45px;
+$textarea-height: 150px;
 
 /*spacing*/
 $less-than-little: .2rem;
@@ -89,6 +91,9 @@ $line-height-tall: 1.65rem;
 
 /*form*/
 $input-spacing: 1rem 1rem;
+$input-color: $secondary-color;
+$input-background-secondary-color: #ececec;
+$select-color: rgba(33, 51, 62, .55);
 
 /*paths*/
 $jumbo-path: "../images/jumbo.png";

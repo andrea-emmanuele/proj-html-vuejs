@@ -8,6 +8,7 @@
 .fa,
 .fas,
 body section .content .cards .card ul li:after,
+body section .content form .item .select-container:after,
 i,
 .far,
 i.edit:before,
@@ -24,7 +25,7 @@ i.fab {
   line-height: 1;
 }
 
-body section .content .cards .card ul li:after, i {
+body section .content .cards .card ul li:after, body section .content form .item .select-container:after, i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -127,6 +128,7 @@ body section .content .cards .card ul li:after, i {
 .fa.fa-pull-left,
 .fas.fa-pull-left,
 body section .content .cards .card ul li.fa-pull-left:after,
+body section .content form .item .fa-pull-left.select-container:after,
 i.fa-pull-left,
 .far.fa-pull-left,
 i.fa-pull-left.edit:before,
@@ -137,6 +139,7 @@ i.fa-pull-left.edit:before,
 .fa.fa-pull-right,
 .fas.fa-pull-right,
 body section .content .cards .card ul li.fa-pull-right:after,
+body section .content form .item .fa-pull-right.select-container:after,
 i.fa-pull-right,
 .far.fa-pull-right,
 i.fa-pull-right.edit:before,
@@ -6102,6 +6105,7 @@ readers do not read off random characters that represent icons */
 .fa,
 .fas,
 body section .content .cards .card ul li:after,
+body section .content form .item .select-container:after,
 i {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -6299,6 +6303,9 @@ i.rocket:before {
 i.gem:before {
   content: "";
 }
+i.marker:before {
+  content: "";
+}
 
 .most-popular:before {
   position: absolute;
@@ -6320,6 +6327,10 @@ i.gem:before {
 
 .w70 {
   width: 70%;
+}
+
+.w100 {
+  flex: 0 0 100% !important;
 }
 
 .centered {
@@ -6406,14 +6417,35 @@ body section .content form {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-body section .content form input {
+body section .content form input, body section .content form select, body section .content form textarea {
   font-size: 1rem;
+  color: #21333e;
   background: rgba(255, 255, 255, 0.6);
   padding: 1rem 1rem;
   border: unset;
   border-radius: 0.3rem;
   outline: none;
   margin-bottom: 1rem;
+}
+body section .content form .item {
+  position: relative;
+}
+body section .content form .item .select-container {
+  margin-bottom: 1rem;
+}
+body section .content form .item .select-container:after {
+  position: absolute;
+  top: 25%;
+  right: 40px;
+  font-size: 1.2rem;
+  color: rgba(33, 51, 62, 0.55);
+  content: "";
+}
+body section .content form .item .select-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-bottom: unset;
 }
 body section .content .wrapper {
   background: rgba(50, 71, 50, 0.1);
@@ -6796,6 +6828,74 @@ main section#newsletter .content .inner-content form .item {
 }
 main section#newsletter .content .inner-content form .item input {
   width: 100%;
+}
+main section#get-in-touch .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+main section#get-in-touch .content .inner-content {
+  flex-basis: 400px;
+}
+main section#get-in-touch .content .inner-content:first-child {
+  flex-grow: 1;
+}
+main section#get-in-touch .content .inner-content:last-child {
+  padding-left: 3rem;
+}
+main section#get-in-touch .content .inner-content:last-child h2 {
+  margin-top: 1.5rem;
+}
+main section#get-in-touch .content .inner-content:last-child p {
+  margin-top: unset;
+}
+main section#get-in-touch .content .inner-content:last-child .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+}
+main section#get-in-touch .content .inner-content:last-child .item:nth-child(4) {
+  margin-top: 1.5rem;
+}
+main section#get-in-touch .content .inner-content:last-child .item i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+main section#get-in-touch .content .inner-content:last-child .item i.circled {
+  width: 45px;
+  height: 45px;
+}
+main section#get-in-touch .content .inner-content:last-child .item button {
+  color: #058283;
+  margin-top: 0.5rem;
+}
+main section#get-in-touch .content .inner-content:last-child .item button:hover {
+  color: #fff;
+}
+main section#get-in-touch .content .inner-content form {
+  margin-top: 3rem;
+}
+main section#get-in-touch .content .inner-content form .item {
+  flex: 0 0 50%;
+}
+main section#get-in-touch .content .inner-content form .item input, main section#get-in-touch .content .inner-content form .item select {
+  width: 96%;
+}
+main section#get-in-touch .content .inner-content form .item select {
+  color: rgba(33, 51, 62, 0.55);
+}
+main section#get-in-touch .content .inner-content form .item input, main section#get-in-touch .content .inner-content form .item select, main section#get-in-touch .content .inner-content form .item textarea {
+  background: #ececec;
+}
+main section#get-in-touch .content .inner-content form .item textarea {
+  font-family: inherit;
+  width: 98%;
+  height: 150px;
+  border: unset;
+  resize: none;
 }
 
 /*# sourceMappingURL=style.css.map */

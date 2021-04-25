@@ -1,0 +1,85 @@
+section#get-in-touch {
+  .content {
+    @include flex(row, center, flex-start);
+
+    .inner-content {
+      flex-basis: 400px;
+
+      &:first-child {
+        flex-grow: 1;
+      }
+
+      &:last-child {
+        padding-left: $more-than-much;
+
+        h2 {
+          margin-top: $more;
+        }
+
+        p {
+          margin-top: unset;
+        }
+
+        .item {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-top: $normal;
+
+          &:nth-child(4) {
+            margin-top: $more;
+          }
+
+          i {
+            font-size: $big-size;
+            margin-right: $normal;
+
+            &.circled {
+              width: $icon-secondary-size;
+              height: $icon-secondary-size;
+            }
+          }
+
+          button {
+            color: $button-primary-color;
+            margin-top: $little;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+
+      form {
+        margin-top: $more-than-much;
+
+        .item {
+          @include flexBasis(0, 0, 50%);
+
+          input, select {
+            width: 96%;
+          }
+
+          select {
+            color: $select-color;
+          }
+
+          input, select, textarea {
+            background: $input-background-secondary-color;
+          }
+
+          textarea {
+            font-family: inherit;
+            width: 98%;
+            height: $textarea-height;
+            border: unset;
+            resize: none;
+          }
+        }
+
+      }
+    }
+  }
+}

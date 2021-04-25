@@ -11,8 +11,8 @@ i {
     position: relative;
     color: $icons-color;
     background: $icons-bg-color;
-    width: $icon-sizes;
-    height: $icon-sizes;
+    width: $icon-primary-size;
+    height: $icon-primary-size;
     border-radius: 50%;
 
     &:before {
@@ -155,6 +155,12 @@ i {
   &.gem {
     &:before {
       content: "\f3a5";
+    }
+  }
+
+  &.marker {
+    &:before {
+      content: "\f3c5";
     }
   }
 }

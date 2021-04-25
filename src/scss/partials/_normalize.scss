@@ -97,14 +97,41 @@ body {
         @include flex(row, flex-start, flex-start);
         flex-wrap: wrap;
 
-        input {
+        input, select, textarea {
           font-size: $normal-size;
+          color: $input-color;
           background: rgba(255, 255, 255, .6);
           padding: $input-spacing;
           border: unset;
           border-radius: $button-radius;
           outline: none;
           margin-bottom: $normal;
+        }
+
+        .item {
+          position: relative;
+
+          .select-container {
+            margin-bottom: $normal;
+
+            &:after {
+              @extend %fa-icon;
+              @extend .fas;
+              position: absolute;
+              top: 25%;
+              right: 40px;
+              font-size: $big-size;
+              color: $select-color;
+              content: "\f107";
+            }
+
+            select {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              margin-bottom: unset;
+            }
+          }
         }
       }
 

@@ -110,7 +110,16 @@
                     </div>
                 </div>
             </section>
-            <section id="get-in-touch" class="primary"></section>
+            <section id="get-in-touch" class="primary">
+                <div class="content">
+                    <div class="inner-content" v-for="content in main.getInTouch">
+                        <div class="item" v-for="item in content.items" v-html="getItems(item)"></div>
+                        <form v-if="content.form">
+                            <div class="item" :class="item.class" v-for="item in content.form" v-html="getItems(item)"></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div class="content">

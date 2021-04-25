@@ -544,7 +544,88 @@ new Vue({
                     type: "button",
                     class: "primary"
                 }]
-            }
+            },
+            getInTouch: [{
+                items: [{
+                    text: "send a message",
+                    type: "span",
+                    class: "primary"
+                },
+                {
+                    text: "Get in <span class='wrapper'>Touch</span>",
+                    type: "h",
+                    strongness: "1"
+                },
+                {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                    type: "paragraph"
+                }],
+                form: [{
+                    placeholder: "Name",
+                    type: "input",
+                    inputType: "text"
+                },
+                {
+                    placeholder: "Email",
+                    type: "input",
+                    inputType: "email"
+                },
+                {
+                    placeholder: "Email",
+                    type: "input",
+                    inputType: "tel"
+                },
+                {
+                    placeholder: "Email",
+                    type: "select",
+                    options: ["More Info"]
+                },
+                {
+                    placeholder: "Message",
+                    type: "textarea",
+                    class: "w100"
+                },
+                {
+                    text: "send",
+                    type: "button",
+                    class: "primary"
+                }]
+            },
+            {
+                items: [{
+                    text: "Lorem ipsum.",
+                    type: "h",
+                    strongness: "2"
+                },
+                {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ipsa.",
+                    type: "paragraph"
+                },
+                {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ipsa.",
+                    type: "paragraph"
+                },
+                {
+                    text: "+1 333 3333-3333",
+                    class: "phone circled",
+                    type: "icon-text"
+                },
+                {
+                    text: "hello@example.com",
+                    class: "message circled",
+                    type: "icon-text"
+                },
+                {
+                    text: "Main Avenue, 987",
+                    class: "marker circled",
+                    type: "icon-text"
+                },
+                {
+                    text: "view map",
+                    type: "button",
+                    class: "secondary"
+                }]
+            }]
         },
         scrollYTargets: [],
         scrolling: false,
@@ -576,6 +657,12 @@ new Vue({
                                 listItems = `<ul>${listItems}</ul>`;
                                 return listItems ;
                 case "input": return `<input type="${item.inputType}" placeholder="${item.placeholder}">`;
+                case "textarea": return `<textarea placeholder="${item.placeholder}"></textarea>`;
+                case "select":  let options = "";
+                                item.options.forEach(option => {
+                                    options += `<option>${option}</option>`;
+                                });
+                                return `<div class="select-container"><select>${options}</select></div>`;
             }
         }
     },
