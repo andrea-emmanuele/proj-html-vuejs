@@ -817,12 +817,22 @@ new Vue({
         }
     },
     methods: {
-        fixMainHeaderToTop() {
+        scrollEvents() {
+            this.mainHeaderPosition();
+
+            let footer = document.querySelector("footer");
+            let scrollUp = document.querySelector("#scroll-up");
+
+            if (window.scrollY > (footer.offsetTop - footer.offsetHeight))
+                this.showScrollUp(scrollUp);
+            else
+                this.hideScrollUp(scrollUp);
+        },
+        mainHeaderPosition() {
             let mainHeader = document.querySelector("header > section#inner-main");
             let mainHeaderColor = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-top-color");
             let mainHeaderHeight = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-main-height");
             let topHeaderHeight = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-top-height");
-            let footer = document.querySelector("footer");
 
             this.scrollYTargets.push(parseInt(mainHeaderHeight));
             this.scrollYTargets.push(parseInt(topHeaderHeight));
@@ -839,20 +849,13 @@ new Vue({
                 mainHeader.style.background = "transparent";
                 this.scrolling = false;
             }
-
-            if (window.scrollY > (footer.offsetTop - footer.offsetHeight)) {
-                this.showScrollUp();
-            }
-            else
-                this.hideScrollUp();
         },
-        hideScrollUp() {
-            let scrollUp = document.querySelector("#scroll-up");
+        hideScrollUp(scrollUp) {
             scrollUp.style.display = "none";
         },
-        showScrollUp() {
-            let scrollUp = document.querySelector("#scroll-up");
+        showScrollUp(scrollUp) {
             scrollUp.style.display = "block";
+            scrollUp.style.animation = "showScrollUp 500ms ease-in";
         },
         scrollUp() {
             window.scrollTo({
@@ -862,7 +865,6 @@ new Vue({
         }
     },
     created() {
-        this.hideScrollUp();
-        window.addEventListener("scroll", this.fixMainHeaderToTop);
+        window.addEventListener("scroll", this.scrollEvents);
     }
 });

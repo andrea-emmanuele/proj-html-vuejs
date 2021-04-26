@@ -8,6 +8,7 @@
 .fa,
 .fas,
 footer section#inner-footer .cards .card ul li:before,
+main section#plans .content .cards .card.plan:hover:after,
 body section .content .cards .card ul li:after,
 body section .content form .item .select-container:after,
 i,
@@ -26,7 +27,7 @@ i.fab {
   line-height: 1;
 }
 
-footer section#inner-footer .cards .card ul li:before, body section .content .cards .card ul li:after, body section .content form .item .select-container:after, i {
+footer section#inner-footer .cards .card ul li:before, main section#plans .content .cards .card.plan:hover:after, body section .content .cards .card ul li:after, body section .content form .item .select-container:after, i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -129,6 +130,7 @@ footer section#inner-footer .cards .card ul li:before, body section .content .ca
 .fa.fa-pull-left,
 .fas.fa-pull-left,
 footer section#inner-footer .cards .card ul li.fa-pull-left:before,
+main section#plans .content .cards .fa-pull-left.card.plan:hover:after,
 body section .content .cards .card ul li.fa-pull-left:after,
 body section .content form .item .fa-pull-left.select-container:after,
 i.fa-pull-left,
@@ -141,6 +143,7 @@ i.fa-pull-left.edit:before,
 .fa.fa-pull-right,
 .fas.fa-pull-right,
 footer section#inner-footer .cards .card ul li.fa-pull-right:before,
+main section#plans .content .cards .fa-pull-right.card.plan:hover:after,
 body section .content .cards .card ul li.fa-pull-right:after,
 body section .content form .item .fa-pull-right.select-container:after,
 i.fa-pull-right,
@@ -6108,6 +6111,7 @@ readers do not read off random characters that represent icons */
 .fa,
 .fas,
 footer section#inner-footer .cards .card ul li:before,
+main section#plans .content .cards .card.plan:hover:after,
 body section .content .cards .card ul li:after,
 body section .content form .item .select-container:after,
 i {
@@ -6213,6 +6217,15 @@ i {
   }
   to {
     top: 0;
+  }
+}
+/*scrollUp*/
+@keyframes showScrollUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 i {
@@ -6659,6 +6672,7 @@ body section #scroll-up {
   position: fixed;
   bottom: 1rem;
   right: 0.5rem;
+  display: none;
 }
 body section #scroll-up i {
   color: #0d1317 !important;
@@ -6840,6 +6854,17 @@ main section#about .inner-content .inner-container {
 main section#about .inner-content .inner-container .item-container {
   flex: 0 0 48%;
   margin-top: 3rem;
+}
+main section#plans .content .cards .card {
+  cursor: pointer;
+}
+main section#plans .content .cards .card.plan:hover:after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.7rem;
+  color: #058283;
+  content: "";
 }
 main section#newsletter {
   background: url("../images/bg-1.jpg") no-repeat center;

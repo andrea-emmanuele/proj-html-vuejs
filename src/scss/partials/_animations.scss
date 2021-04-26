@@ -43,3 +43,13 @@
     top: 0;
   }
 }
+
+/*scrollUp*/
+@keyframes showScrollUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

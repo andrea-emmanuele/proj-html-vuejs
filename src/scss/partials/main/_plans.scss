@@ -1,0 +1,24 @@
+section#plans {
+  .content {
+    .cards {
+      .card {
+        cursor: pointer;
+
+        &.plan {
+          &:hover {
+            &:after {
+              @extend %fa-icon;
+              @extend .fas;
+              position: absolute;
+              top: $card-plan-hover-arrow-position;
+              right: $card-plan-hover-arrow-position;
+              font-size: $card-plan-hover-arrow-size;
+              color: $icons-color;
+              content: "\f061";
+            }
+          }
+        }
+      }
+    }
+  }
+}
