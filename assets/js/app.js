@@ -822,6 +822,7 @@ new Vue({
             let mainHeaderColor = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-top-color");
             let mainHeaderHeight = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-main-height");
             let topHeaderHeight = getComputedStyle(document.documentElement).getPropertyValue("--header-inner-top-height");
+            let footer = document.querySelector("footer");
 
             this.scrollYTargets.push(parseInt(mainHeaderHeight));
             this.scrollYTargets.push(parseInt(topHeaderHeight));
@@ -838,9 +839,30 @@ new Vue({
                 mainHeader.style.background = "transparent";
                 this.scrolling = false;
             }
+
+            if (window.scrollY > (footer.offsetTop - footer.offsetHeight)) {
+                this.showScrollUp();
+            }
+            else
+                this.hideScrollUp();
+        },
+        hideScrollUp() {
+            let scrollUp = document.querySelector("#scroll-up");
+            scrollUp.style.display = "none";
+        },
+        showScrollUp() {
+            let scrollUp = document.querySelector("#scroll-up");
+            scrollUp.style.display = "block";
+        },
+        scrollUp() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
     },
     created() {
+        this.hideScrollUp();
         window.addEventListener("scroll", this.fixMainHeaderToTop);
     }
 });

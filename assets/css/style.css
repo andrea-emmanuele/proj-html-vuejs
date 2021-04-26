@@ -6310,6 +6310,9 @@ i.gem:before {
 i.marker:before {
   content: "";
 }
+i.arrow-up:before {
+  content: "";
+}
 
 .most-popular:before {
   position: absolute;
@@ -6651,6 +6654,20 @@ body section.ternary .cards {
 body section.ternary .cards .card {
   margin-top: 2rem;
   background: #fff;
+}
+body section #scroll-up {
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+}
+body section #scroll-up i {
+  color: #0d1317 !important;
+}
+body section #scroll-up i.circled {
+  background: #19191c;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
 
 /*structure*/

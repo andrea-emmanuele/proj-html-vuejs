@@ -163,4 +163,10 @@ i {
       content: "\f3c5";
     }
   }
+
+  &.arrow-up {
+    &:before {
+      content: "\f062";
+    }
+  }
 }

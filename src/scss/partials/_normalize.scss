@@ -376,6 +376,23 @@ body {
         }
       }
     }
+
+    #scroll-up {
+      position: fixed;
+      bottom: $scroll-up-icon-bottom-position;
+      right: $scroll-up-icon-right-position;
+
+      i {
+        color: $scroll-up-icon-color !important;
+
+        &.circled {
+          background: $scroll-up-icon-bg-color;
+          width: $icon-ternary-size;
+          height: $icon-ternary-size;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 
