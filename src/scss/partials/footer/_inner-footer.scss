@@ -25,6 +25,10 @@ section#inner-footer {
             height: 16px;
             margin-right: $little;
           }
+
+          &.secondary {
+            margin-top: $much;
+          }
         }
       }
 

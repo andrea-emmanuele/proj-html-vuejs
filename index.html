@@ -131,7 +131,13 @@
                     </div>
                 </div>
             </section>
-            <section id="pie" class="secondary"></section>
+            <section id="pie" class="secondary">
+                <div class="content">
+                    <div class="inner-content" v-for="item in structure.footer.pie.items">
+                        <div class="item" v-html="getItems(item)"></div>
+                    </div>
+                </div>
+            </section>
         </footer>
     </section>
 

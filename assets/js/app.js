@@ -635,141 +635,146 @@ new Vue({
                         type: "brand",
                         class: "brand"
                     },
-                        {
-                            text: "Lorem ipsum dolor sit amet, consectetur adipisicing.",
-                            type: "paragraph"
-                        },
-                        {
-                            text: "+1 333 3333-3333",
-                            class: "phone",
-                            type: "icon-text"
-                        },
-                        {
-                            text: "hello@example.com",
-                            class: "message",
-                            type: "icon-text"
-                        },
-                        {
-                            text: "Main Avenue, 987",
-                            class: "marker",
-                            type: "icon-text"
-                        },
-                        {
-                            text: "get in touch",
-                            type: "button",
-                            class: "secondary"
-                        }],
+                    {
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing.",
+                        type: "paragraph"
+                    },
+                    {
+                        text: "+1 333 3333-3333",
+                        class: "phone",
+                        type: "icon-text"
+                    },
+                    {
+                        text: "hello@example.com",
+                        class: "message",
+                        type: "icon-text"
+                    },
+                    {
+                        text: "Main Avenue, 987",
+                        class: "marker",
+                        type: "icon-text"
+                    },
+                    {
+                        text: "get in touch",
+                        type: "link",
+                        href: "#get-in-touch",
+                        class: "secondary"
+                    }],
                     class: "transparent"
                 },
-                    {
-                        items: [{
-                            text: "Lorem ipsum.",
-                            type: "h",
-                            strongness: "2"
-                        },
-                            {
-                                list: [{
-                                    text: "<a href='#'>Lorem ipsum.</a>",
-                                    class: "caret-list"
-                                },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "caret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "caret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    }],
-                                type: "list"
-                            }]
+                {
+                    items: [{
+                        text: "Lorem ipsum.",
+                        type: "h",
+                        strongness: "2"
                     },
-                    {
-                        items: [{
-                            text: "<a href='#'>Lorem ipsum.</a>",
-                            type: "h",
-                            strongness: "2"
-                        },
-                            {
-                                list: [{
+                        {
+                            list: [{
+                                text: "<a href='#'>Lorem ipsum.</a>",
+                                class: "caret-list"
+                            },
+                                {
                                     text: "<a href='#'>Lorem ipsum.</a>",
                                     class: "caret-list"
                                 },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "caret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "caret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    }],
-                                type: "list"
-                            }]
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "caret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                }],
+                            type: "list"
+                        }]
+                },
+                {
+                    items: [{
+                        text: "<a href='#'>Lorem ipsum.</a>",
+                        type: "h",
+                        strongness: "2"
                     },
-                    {
-                        items: [{
-                            text: "<a href='#'>Lorem ipsum.</a>",
-                            type: "h",
-                            strongness: "2"
-                        },
-                            {
-                                list: [{
+                        {
+                            list: [{
+                                text: "<a href='#'>Lorem ipsum.</a>",
+                                class: "caret-list"
+                            },
+                                {
                                     text: "<a href='#'>Lorem ipsum.</a>",
                                     class: "caret-list"
                                 },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "caret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "caret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    },
-                                    {
-                                        text: "<a href='#'>Lorem ipsum.</a>",
-                                        class: "uncaret-list"
-                                    }],
-                                type: "list"
-                            }]
-                    }],
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "caret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                }],
+                            type: "list"
+                        }]
+                },
+                {
+                    items: [{
+                        text: "<a href='#'>Lorem ipsum.</a>",
+                        type: "h",
+                        strongness: "2"
+                    },
+                        {
+                            list: [{
+                                text: "<a href='#'>Lorem ipsum.</a>",
+                                class: "caret-list"
+                            },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "caret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "caret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                },
+                                {
+                                    text: "<a href='#'>Lorem ipsum.</a>",
+                                    class: "uncaret-list"
+                                }],
+                            type: "list"
+                        }]
+                }],
                 pie: {
-                    items: {
-
-                    }
+                    items: [{
+                        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                        type: "paragraph"
+                    },
+                    {
+                        text: "\t&#169; 2021 Lorem ipsum dolor sit amet.",
+                        type: "paragraph"
+                    }]
                 }
             }
-            ,
         },
         scrollYTargets: [],
         scrolling: false,

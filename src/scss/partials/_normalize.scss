@@ -54,7 +54,9 @@ body {
         text-decoration: none;
       }
 
-      button, .item.primary > a {
+      button,
+      .item.primary > a,
+      .item.secondary > a {
         all: unset;
         font-weight: $bolder;
         text-transform: uppercase;
@@ -89,6 +91,17 @@ body {
           a {
             color: $primary-color;
             background: $button-primary-color;
+          }
+        }
+
+        &.secondary {
+          a {
+            background: $button-secondary-color;
+            border: 1px solid $button-primary-color;
+
+            &:hover {
+              border: 1px solid $button-hover-color;
+            }
           }
         }
       }

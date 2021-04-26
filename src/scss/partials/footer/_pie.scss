@@ -1,8 +1,8 @@
 section#pie {
-  background: $pie-background;
+  background: $pie-bg-color;
   padding: $pie-section-spacing;
 
   .content {
-
+    @include flex(row, space-between, center);
   }
 }
