@@ -10,24 +10,6 @@ section#inner-main {
   .content {
     @include headerContent($header-secondary-color, $normal-size, $much);
 
-    .inner-left {
-      .brand {
-        font-size: $big-size;
-        font-weight: $bold;
-        color: $header-primary-color;
-        letter-spacing: $letter-spacing;
-        @include flex(row, flex-start, center);
-
-        span {
-          color: $brand-color;
-          background: rgba(51, 71, 70, $span-opacity);
-          padding: $span-padding;
-          border-radius: $span-radius;
-          margin-right: $less-than-little;
-        }
-      }
-    }
-
     .inner-right {
       .item {
         font-weight: $bolder;

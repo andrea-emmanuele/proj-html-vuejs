@@ -135,6 +135,24 @@ body {
         }
       }
 
+      .brand {
+        font-size: $big-size;
+        font-weight: $bold;
+        color: $header-primary-color;
+        letter-spacing: $letter-spacing;
+        text-transform: uppercase;
+        @include flex(row, flex-start, center);
+
+        span {
+          color: $brand-color;
+          background: rgba(51, 71, 70, $span-opacity);
+          padding: $span-padding;
+          border-radius: $span-radius;
+          margin-right: $less-than-little;
+          display: inline-block;
+        }
+      }
+
       .wrapper {
         background: rgba(50, 71, 50, $wrapper-primary-opacity);
         padding: $wrapper-padding;

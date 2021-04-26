@@ -1,0 +1,56 @@
+section#inner-footer {
+  .cards {
+    margin-top: unset;
+
+    .card {
+      flex: 0 0 calc(70% / 3);
+      margin-top: unset;
+
+      &.transparent {
+        background: transparent;
+        flex: 0 0 22%;
+        padding: unset;
+
+        .item {
+          @include flex(row, flex-start, center);
+          margin-bottom: $normal;
+
+          p {
+            margin-top: unset;
+          }
+
+          i {
+            font-size: $normal-size;
+            width: 16px;
+            height: 16px;
+            margin-right: $little;
+          }
+        }
+      }
+
+      &:hover {
+        animation: none;
+      }
+
+      &:not(hover) {
+        animation: none;
+      }
+
+      h2 {
+        margin-top: unset;
+      }
+
+      ul {
+        li {
+          &:before {
+            @extend %fa-icon;
+            @extend .fas;
+            font-size: $big-size;
+            content: "\f105 ";
+            margin-right: $little;
+          }
+        }
+      }
+    }
+  }
+}

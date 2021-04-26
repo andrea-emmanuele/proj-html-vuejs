@@ -12,28 +12,28 @@
             <section id="inner-top">
                 <div class="content">
                     <div class="inner-left">
-                        <div class="item" v-for="item in header.top.innerLeft.items" v-html="getItems(item)"></div>
+                        <div class="item" v-for="item in structure.header.top.innerLeft.items" v-html="getItems(item)"></div>
                     </div>
                     <div class="inner-right">
-                        <div class="item" v-for="item in header.top.innerRight.items" v-html="getItems(item)"></div>
+                        <div class="item" v-for="item in structure.header.top.innerRight.items" v-html="getItems(item)"></div>
                     </div>
                 </div>
             </section>
             <section id="inner-main">
                 <div class="content">
                     <div class="inner-left">
-                        <div class="brand" v-html="header.main.brandName"></div>
+                        <div class="brand" v-html="structure.header.main.brandName"></div>
                     </div>
                     <div class="inner-right">
-                        <div class="item" :class="item.class" v-for="item in header.main.navigationItems" v-html="getItems(item)"></div>
+                        <div class="item" :class="item.class" v-for="item in structure.header.main.navigationItems" v-html="getItems(item)"></div>
                     </div>
                 </div>
             </section>
             <section id="jumbo">
                 <div class="content">
-                    <div class="item" v-for="item in header.jumbo.items" v-html="getItems(item)"></div>
+                    <div class="item" v-for="item in structure.header.jumbo.items" v-html="getItems(item)"></div>
                     <div class="actions">
-                        <div class="item" :class="item.class" v-for="item in header.jumbo.actions" v-html="getItems(item)"></div>
+                        <div class="item" :class="item.class" v-for="item in structure.header.jumbo.actions" v-html="getItems(item)"></div>
                     </div>
                 </div>
             </section>
@@ -42,7 +42,7 @@
             <section id="advantages" class="ternary">
                 <div class="content">
                     <div class="cards">
-                        <div class="card" v-for="card in main.advantages.cards">
+                        <div class="card" v-for="card in structure.main.advantages.cards">
                             <div class="item" v-for="item in card.items" v-html="getItems(item)"></div>
                         </div>
                     </div>
@@ -51,22 +51,22 @@
             <section id="about" class="primary">
                 <div class="content">
                     <div class="inner-content">
-                        <div class="item" v-for="item in main.about.items" v-html="getItems(item)"></div>
+                        <div class="item" v-for="item in structure.main.about.items" v-html="getItems(item)"></div>
                         <div class="inner-container">
-                            <div class="item-container" v-for="item in main.about.items[main.about.items.length - 1].innerContainer.iconHeadings" v-html="getItems(item)"></div>
+                            <div class="item-container" v-for="item in structure.main.about.items[structure.main.about.items.length - 1].innerContainer.iconHeadings" v-html="getItems(item)"></div>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="services" class="secondary">
                 <div class="content">
-                    <div class="item" v-for="item in main.services.items" v-html="getItems(item)"></div>
+                    <div class="item" v-for="item in structure.main.services.items" v-html="getItems(item)"></div>
                     <div class="inner-content inline">
-                        <div class="item" v-for="item in main.services.itemsGroup" v-html="getItems(item)"></div>
+                        <div class="item" v-for="item in structure.main.services.itemsGroup" v-html="getItems(item)"></div>
                     </div>
                     <div class="inner-content">
                         <div class="cards">
-                            <div class="card" v-for="card in main.services.cards">
+                            <div class="card" v-for="card in structure.main.services.cards">
                                 <div class="item" v-for="item in card.items" v-html="getItems(item)"></div>
                             </div>
                         </div>
@@ -75,9 +75,9 @@
             </section>
             <section id="plans" class="ternary">
                 <div class="content">
-                    <div class="item centered text-centered w70" v-for="item in main.plans.items" v-html="getItems(item)"></div>
+                    <div class="item centered text-centered w70" v-for="item in structure.main.plans.items" v-html="getItems(item)"></div>
                     <div class="cards">
-                        <div class="card" v-for="card in main.plans.cards" :class="card.class">
+                        <div class="card" v-for="card in structure.main.plans.cards" :class="card.class">
                             <div class="item text-centered" v-for="item in card.items" v-html="getItems(item)"></div>
                         </div>
                     </div>
@@ -85,13 +85,13 @@
             </section>
             <section id="blog" class="primary">
                 <div class="content">
-                    <div class="item" v-for="item in main.editorial.items" v-html="getItems(item)"></div>
+                    <div class="item" v-for="item in structure.main.editorial.items" v-html="getItems(item)"></div>
                     <div class="inner-content inline">
-                        <div class="item" v-for="item in main.editorial.itemsGroup" v-html="getItems(item)"></div>
+                        <div class="item" v-for="item in structure.main.editorial.itemsGroup" v-html="getItems(item)"></div>
                     </div>
                     <div class="inner-content">
                         <div class="cards">
-                            <div class="card img" v-for="card in main.editorial.cards" :style="card.imagePath">
+                            <div class="card img" v-for="card in structure.main.editorial.cards" :style="card.imagePath">
                                 <div class="item text-centered" v-for="item in card.items" v-html="getItems(item)"></div>
                             </div>
                         </div>
@@ -101,18 +101,18 @@
             <section id="newsletter" class="secondary">
                 <div class="content">
                     <div class="inner-content">
-                        <div class="item" v-for="item in main.newsletter.items" v-html="getItems(item)"></div>
+                        <div class="item" v-for="item in structure.main.newsletter.items" v-html="getItems(item)"></div>
                     </div>
                     <div class="inner-content">
                         <form>
-                            <div class="item" v-for="item in main.newsletter.form" v-html="getItems(item)"></div>
+                            <div class="item" v-for="item in structure.main.newsletter.form" v-html="getItems(item)"></div>
                         </form>
                     </div>
                 </div>
             </section>
             <section id="get-in-touch" class="primary">
                 <div class="content">
-                    <div class="inner-content" v-for="content in main.getInTouch">
+                    <div class="inner-content" v-for="content in structure.main.getInTouch">
                         <div class="item" v-for="item in content.items" v-html="getItems(item)"></div>
                         <form v-if="content.form">
                             <div class="item" :class="item.class" v-for="item in content.form" v-html="getItems(item)"></div>
@@ -124,9 +124,10 @@
         <footer>
             <section id="inner-footer" class="secondary">
                 <div class="content">
-                    <div class="inner-content" v-for="content in footer">
-                        <div class="brand" v-html="header.main.brandName"></div>
-                        <div class="item" v-for="item in content.items" v-html="getItems(item)"></div>
+                    <div class="cards">
+                        <div class="card" :class="content.class" v-for="content in structure.footer.innerFooter">
+                            <div class="item" :class="item.class" v-for="item in content.items" v-html="getItems(item)"></div>
+                        </div>
                     </div>
                 </div>
             </section>
